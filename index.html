@@ -41,8 +41,8 @@
 </script>
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_32x32_fill_box_center_2.PNG">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
   content="Eureka is a elegant and powerful theme for Hugo.">
@@ -53,7 +53,7 @@
 <meta property="og:type" content="website" />
 
 
-<meta property="og:image" content="https://ObitoSnn.gitee.io/images/icon.png">
+<meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
 <meta property="og:url" content="https://ObitoSnn.gitee.io/" />
@@ -188,8 +188,10 @@
     
     
     
-    
-    
+      
+      
+        
+      
     
 
     
@@ -202,7 +204,7 @@
   <div class="pl-scrollbar bg-secondary-bg" 
     >
     <div class="max-w-screen-xl mx-auto">
-      <div id="about" class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
+      <div id="about" class="lg:w-4/5 mx-auto px-6 md:px-8 xl:px-12 py-12">
         
   
 
@@ -349,7 +351,7 @@ HashMap底层 数组&#43;链表 (JDK7及之前)，数组&#43;链表&#43;红黑�
 HashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64
 源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组
 V put(K key, V value) 判断hashtable是否存在，如果不存在则创建
-if ((tab = table) == null || (n = tab.length) == 0) n = (tab = resize()).length;  判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入</div>
+if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length; 判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入</div>
   </div>
   <div class="px-6 pb-2">
     <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
@@ -388,7 +390,7 @@ if ((tab = table) == null || (n = tab.length) == 0) n = (tab = resize()).length;
       <a href="https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/" class="hover:text-eureka">JDBC——针对不同表的通用查询操作，返回多条数据</a>
     </div>
     <div class="">思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源
- /** * 针对不同表的通用查询操作，返回多条数据 * @param c 泛型为对应表的实体类的Class实例 * @param sql 执行的SQL语句 * @param args 占位符参数 * @param &amp;lt;T&amp;gt; 对应表的实体类 * @return 返回对应表的实体类对象集合 */ public &amp;lt;T&amp;gt; List&amp;lt;T&amp;gt; getForList(Class&amp;lt;T&amp;gt; c, String sql, Object... args) { List&amp;lt;T&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); Connection conn = null; PreparedStatement ps = null; ResultSet rs = null; try { //1.获取连接 conn = JDBCUtils.getConnection(); //2.预编译SQL返回PreparedStatement实例 ps = conn.prepareStatement(sql); //3.处理占位符 for (int i = 0; i &amp;lt; args.</div>
+ /*** 针对不同表的通用查询操作，返回多条数据* @param c 泛型为对应表的实体类的Class实例* @param sql 执行的SQL语句* @param args 占位符参数* @param &amp;lt;T&amp;gt; 对应表的实体类* @return 返回对应表的实体类对象集合*/public &amp;lt;T&amp;gt; List&amp;lt;T&amp;gt; getForList(Class&amp;lt;T&amp;gt; c, String sql, Object... args) {List&amp;lt;T&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();Connection conn = null;PreparedStatement ps = null;ResultSet rs = null;try {//1.获取连接conn = JDBCUtils.getConnection();//2.预编译SQL返回PreparedStatement实例ps = conn.prepareStatement(sql);//3.处理占位符for (int i = 0; i &amp;lt; args.</div>
   </div>
   <div class="px-6 pb-2">
     <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
@@ -427,7 +429,7 @@ if ((tab = table) == null || (n = tab.length) == 0) n = (tab = resize()).length;
       <a href="https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/" class="hover:text-eureka">Java 反射机制——动态代理举例</a>
     </div>
     <div class="">思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。
- /** * 被代理类实现的接口 * @author ObitoSnn */ public interface Game { void playGame(String gameName); }  /** * 被代理类 * @author ObitoSnn */ public class User implements Game { @Override public void playGame(String gameName) { System.out.println(&amp;quot;用户玩&amp;quot; &#43; gameName); } }  /** * @author ObitoSnn */ public class ProxyFactory { public static Object getProxyInstance(Object target) { MyInvocationHandler handler = new MyInvocationHandler(); handler.init(target); Object proxyInstance = Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), handler); return proxyInstance; } /** * 自定义内部类实现InvocationHandler接口 */ private static class MyInvocationHandler implements InvocationHandler { //被代理类对象 private Object target; /** * 指明被代理类的对象 * @param target */ public void init(Object target) { this.</div>
+ /*** 被代理类实现的接口* @author ObitoSnn*/public interface Game {void playGame(String gameName);} /*** 被代理类* @author ObitoSnn*/public class User implements Game {@Overridepublic void playGame(String gameName) {System.out.println(&amp;quot;用户玩&amp;quot; &#43; gameName);}} /*** @author ObitoSnn*/public class ProxyFactory {public static Object getProxyInstance(Object target) {MyInvocationHandler handler = new MyInvocationHandler();handler.init(target);Object proxyInstance = Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),handler);return proxyInstance;}/*** 自定义内部类实现InvocationHandler接口*/private static class MyInvocationHandler implements InvocationHandler {//被代理类对象private Object target;/*** 指明被代理类的对象* @param target*/public void init(Object target) {this.</div>
   </div>
   <div class="px-6 pb-2">
     <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
@@ -466,7 +468,7 @@ if ((tab = table) == null || (n = tab.length) == 0) n = (tab = resize()).length;
       <a href="https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/" class="hover:text-eureka">Java TCP网络编程——客户端发送文件给服务端，服务端将文件保存在本地</a>
     </div>
     <div class="">思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。
- /** * 实现TCP的网络编程 * 例题2：客户端发送文件给服务端，服务端将文件保存在本地。 * @Author: obito799 * @Description: * @Date 2020/10/15 23:06 */ public class TCPTest2 { @Test public void client() { Socket socket = null; OutputStream os = null; BufferedInputStream bis = null; try { //创建客户端Socket，指明服务器端IP和端口号 String severAddress = InetAddress.getLocalHost().getHostAddress();//本机IP地址 socket = new Socket(severAddress, 8899);//因为是在同一台电脑上，所以IP地址为本机地址 //获取流 os = socket.getOutputStream(); //数据处理 bis = new BufferedInputStream(new FileInputStream(&amp;quot;Sasuke.jpg&amp;quot;)); byte[] buffer = new byte[1024]; int len; while ((len = bis.read(buffer)) !</div>
+ /*** 实现TCP的网络编程* 例题2：客户端发送文件给服务端，服务端将文件保存在本地。* @Author: obito799* @Description:* @Date 2020/10/15 23:06*/public class TCPTest2 {@Testpublic void client() {Socket socket = null;OutputStream os = null;BufferedInputStream bis = null;try {//创建客户端Socket，指明服务器端IP和端口号String severAddress = InetAddress.getLocalHost().getHostAddress();//本机IP地址socket = new Socket(severAddress, 8899);//因为是在同一台电脑上，所以IP地址为本机地址//获取流os = socket.getOutputStream();//数据处理bis = new BufferedInputStream(new FileInputStream(&amp;quot;Sasuke.jpg&amp;quot;));byte[] buffer = new byte[1024];int len;while ((len = bis.read(buffer)) !</div>
   </div>
   <div class="px-6 pb-2">
     <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">

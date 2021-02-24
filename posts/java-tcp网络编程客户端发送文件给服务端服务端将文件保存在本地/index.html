@@ -41,12 +41,12 @@
 </script>
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_32x32_fill_box_center_2.PNG">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
   content="思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。
- /** * 实现TCP的网络编程 * 例题2：客户端发送文件给服务端，服务端将文件保存在本地。 * @Author: obito799 * @Description: * @Date 2020/10/15 23:06 */ public class TCPTest2 { @Test public void client() { Socket socket = null; OutputStream os = null; BufferedInputStream bis = null; try { //创建客户端Socket，指明服务器端IP和端口号 String severAddress = InetAddress.getLocalHost().getHostAddress();//本机IP地址 socket = new Socket(severAddress, 8899);//因为是在同一台电脑上，所以IP地址为本机地址 //获取流 os = socket.getOutputStream(); //数据处理 bis = new BufferedInputStream(new FileInputStream(&quot;Sasuke.jpg&quot;)); byte[] buffer = new byte[1024]; int len; while ((len = bis.read(buffer)) !">
+ /*** 实现TCP的网络编程* 例题2：客户端发送文件给服务端，服务端将文件保存在本地。* @Author: obito799* @Description:* @Date 2020/10/15 23:06*/public class TCPTest2 {@Testpublic void client() {Socket socket = null;OutputStream os = null;BufferedInputStream bis = null;try {//创建客户端Socket，指明服务器端IP和端口号String severAddress = InetAddress.getLocalHost().getHostAddress();//本机IP地址socket = new Socket(severAddress, 8899);//因为是在同一台电脑上，所以IP地址为本机地址//获取流os = socket.getOutputStream();//数据处理bis = new BufferedInputStream(new FileInputStream(&quot;Sasuke.jpg&quot;));byte[] buffer = new byte[1024];int len;while ((len = bis.read(buffer)) !">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,16 +85,16 @@
         "name": "C. Wang",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://ObitoSnn.gitee.io/images/icon.png"
+            "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。\n \/** * 实现TCP的网络编程 * 例题2：客户端发送文件给服务端，服务端将文件保存在本地。 * @Author: obito799 * @Description: * @Date 2020\/10\/15 23:06 *\/ public class TCPTest2 { @Test public void client() { Socket socket = null; OutputStream os = null; BufferedInputStream bis = null; try { \/\/创建客户端Socket，指明服务器端IP和端口号 String severAddress = InetAddress.getLocalHost().getHostAddress();\/\/本机IP地址 socket = new Socket(severAddress, 8899);\/\/因为是在同一台电脑上，所以IP地址为本机地址 \/\/获取流 os = socket.getOutputStream(); \/\/数据处理 bis = new BufferedInputStream(new FileInputStream(\u0026quot;Sasuke.jpg\u0026quot;)); byte[] buffer = new byte[1024]; int len; while ((len = bis.read(buffer)) !"
+    "description": "思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。\n \/**\r* 实现TCP的网络编程\r* 例题2：客户端发送文件给服务端，服务端将文件保存在本地。\r* @Author: obito799\r* @Description:\r* @Date 2020\/10\/15 23:06\r*\/\rpublic class TCPTest2 {\r@Test\rpublic void client() {\rSocket socket = null;\rOutputStream os = null;\rBufferedInputStream bis = null;\rtry {\r\/\/创建客户端Socket，指明服务器端IP和端口号\rString severAddress = InetAddress.getLocalHost().getHostAddress();\/\/本机IP地址\rsocket = new Socket(severAddress, 8899);\/\/因为是在同一台电脑上，所以IP地址为本机地址\r\/\/获取流\ros = socket.getOutputStream();\r\/\/数据处理\rbis = new BufferedInputStream(new FileInputStream(\u0026quot;Sasuke.jpg\u0026quot;));\rbyte[] buffer = new byte[1024];\rint len;\rwhile ((len = bis.read(buffer)) !"
 }
 </script><meta property="og:title" content="Java TCP网络编程——客户端发送文件给服务端，服务端将文件保存在本地 | 主页" />
 <meta property="og:type" content="article" />
 
 
-<meta property="og:image" content="https://ObitoSnn.gitee.io/images/icon.png">
+<meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
 <meta property="og:url" content="https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/" />
@@ -103,7 +103,7 @@
 
 
 <meta property="og:description" content="思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。
- /** * 实现TCP的网络编程 * 例题2：客户端发送文件给服务端，服务端将文件保存在本地。 * @Author: obito799 * @Description: * @Date 2020/10/15 23:06 */ public class TCPTest2 { @Test public void client() { Socket socket = null; OutputStream os = null; BufferedInputStream bis = null; try { //创建客户端Socket，指明服务器端IP和端口号 String severAddress = InetAddress.getLocalHost().getHostAddress();//本机IP地址 socket = new Socket(severAddress, 8899);//因为是在同一台电脑上，所以IP地址为本机地址 //获取流 os = socket.getOutputStream(); //数据处理 bis = new BufferedInputStream(new FileInputStream(&quot;Sasuke.jpg&quot;)); byte[] buffer = new byte[1024]; int len; while ((len = bis.read(buffer)) !" />
+ /*** 实现TCP的网络编程* 例题2：客户端发送文件给服务端，服务端将文件保存在本地。* @Author: obito799* @Description:* @Date 2020/10/15 23:06*/public class TCPTest2 {@Testpublic void client() {Socket socket = null;OutputStream os = null;BufferedInputStream bis = null;try {//创建客户端Socket，指明服务器端IP和端口号String severAddress = InetAddress.getLocalHost().getHostAddress();//本机IP地址socket = new Socket(severAddress, 8899);//因为是在同一台电脑上，所以IP地址为本机地址//获取流os = socket.getOutputStream();//数据处理bis = new BufferedInputStream(new FileInputStream(&quot;Sasuke.jpg&quot;));byte[] buffer = new byte[1024];int len;while ((len = bis.read(buffer)) !" />
 
 
 
