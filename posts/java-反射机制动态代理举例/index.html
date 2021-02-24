@@ -45,8 +45,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
-  content="思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。
- /*** 被代理类实现的接口* @author ObitoSnn*/public interface Game {void playGame(String gameName);} /*** 被代理类* @author ObitoSnn*/public class User implements Game {@Overridepublic void playGame(String gameName) {System.out.println(&quot;用户玩&quot; &#43; gameName);}} /*** @author ObitoSnn*/public class ProxyFactory {public static Object getProxyInstance(Object target) {MyInvocationHandler handler = new MyInvocationHandler();handler.init(target);Object proxyInstance = Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),handler);return proxyInstance;}/*** 自定义内部类实现InvocationHandler接口*/private static class MyInvocationHandler implements InvocationHandler {//被代理类对象private Object target;/*** 指明被代理类的对象* @param target*/public void init(Object target) {this.">
+  content="思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -82,13 +81,13 @@
     },
     "publisher": {
         "@type": "Person",
-        "name": "C. Wang",
+        "name": "ObitoSnn",
         "logo": {
             "@type": "ImageObject",
             "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。\n \/**\r* 被代理类实现的接口\r* @author ObitoSnn\r*\/\rpublic interface Game {\rvoid playGame(String gameName);\r}\r \/**\r* 被代理类\r* @author ObitoSnn\r*\/\rpublic class User implements Game {\r@Override\rpublic void playGame(String gameName) {\rSystem.out.println(\u0026quot;用户玩\u0026quot; \u002b gameName);\r}\r}\r \/**\r* @author ObitoSnn\r*\/\rpublic class ProxyFactory {\rpublic static Object getProxyInstance(Object target) {\rMyInvocationHandler handler = new MyInvocationHandler();\rhandler.init(target);\rObject proxyInstance = Proxy.newProxyInstance(target.getClass().getClassLoader(),\rtarget.getClass().getInterfaces(),\rhandler);\rreturn proxyInstance;\r}\r\/**\r* 自定义内部类实现InvocationHandler接口\r*\/\rprivate static class MyInvocationHandler implements InvocationHandler {\r\/\/被代理类对象\rprivate Object target;\r\/**\r* 指明被代理类的对象\r* @param target\r*\/\rpublic void init(Object target) {\rthis."
+    "description": "思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。"
 }
 </script><meta property="og:title" content="Java 反射机制——动态代理举例 | 主页" />
 <meta property="og:type" content="article" />
@@ -102,8 +101,7 @@
 
 
 
-<meta property="og:description" content="思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。
- /*** 被代理类实现的接口* @author ObitoSnn*/public interface Game {void playGame(String gameName);} /*** 被代理类* @author ObitoSnn*/public class User implements Game {@Overridepublic void playGame(String gameName) {System.out.println(&quot;用户玩&quot; &#43; gameName);}} /*** @author ObitoSnn*/public class ProxyFactory {public static Object getProxyInstance(Object target) {MyInvocationHandler handler = new MyInvocationHandler();handler.init(target);Object proxyInstance = Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),handler);return proxyInstance;}/*** 自定义内部类实现InvocationHandler接口*/private static class MyInvocationHandler implements InvocationHandler {//被代理类对象private Object target;/*** 指明被代理类的对象* @param target*/public void init(Object target) {this." />
+<meta property="og:description" content="思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。" />
 
 
 

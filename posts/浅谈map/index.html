@@ -45,13 +45,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
-  content="Map接口 双列集合，用来存储一对(key - value)一对的数据
-Map接口实现类体系结构 HashMap 哈希表（hash table） 相当于是一个书架，其实是数组&#43;链表
-HashMap底层 数组&#43;链表 (JDK7及之前)，数组&#43;链表&#43;红黑树(JDK8)
-HashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64
-源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组
-V put(K key, V value) 判断hashtable是否存在，如果不存在则创建
-if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length; 判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入">
+  content="Map接口 双列集合，用来存储一对(key - value)一对的数据">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,13 +81,13 @@ if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length;
     },
     "publisher": {
         "@type": "Person",
-        "name": "C. Wang",
+        "name": "ObitoSnn",
         "logo": {
             "@type": "ImageObject",
             "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "Map接口 双列集合，用来存储一对(key - value)一对的数据\nMap接口实现类体系结构 HashMap 哈希表（hash table） 相当于是一个书架，其实是数组\u002b链表\nHashMap底层 数组\u002b链表 (JDK7及之前)，数组\u002b链表\u002b红黑树(JDK8)\nHashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64\n源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组\nV put(K key, V value) 判断hashtable是否存在，如果不存在则创建\nif ((tab = table) == null || (n = tab.length) == 0)\rn = (tab = resize()).length;\r 判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入"
+    "description": "Map接口 双列集合，用来存储一对(key - value)一对的数据"
 }
 </script><meta property="og:title" content="浅谈Map | 主页" />
 <meta property="og:type" content="article" />
@@ -107,13 +101,7 @@ if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length;
 
 
 
-<meta property="og:description" content="Map接口 双列集合，用来存储一对(key - value)一对的数据
-Map接口实现类体系结构 HashMap 哈希表（hash table） 相当于是一个书架，其实是数组&#43;链表
-HashMap底层 数组&#43;链表 (JDK7及之前)，数组&#43;链表&#43;红黑树(JDK8)
-HashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64
-源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组
-V put(K key, V value) 判断hashtable是否存在，如果不存在则创建
-if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length; 判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入" />
+<meta property="og:description" content="Map接口 双列集合，用来存储一对(key - value)一对的数据" />
 
 
 

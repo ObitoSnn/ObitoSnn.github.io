@@ -15,13 +15,7 @@
       <pubDate>Wed, 24 Feb 2021 14:19:01 +0800</pubDate>
       
       <guid>https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/</guid>
-      <description>Map接口 双列集合，用来存储一对(key - value)一对的数据
-Map接口实现类体系结构 HashMap 哈希表（hash table） 相当于是一个书架，其实是数组+链表
-HashMap底层 数组+链表 (JDK7及之前)，数组+链表+红黑树(JDK8)
-HashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64
-源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组
-V put(K key, V value) 判断hashtable是否存在，如果不存在则创建
-if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length; 判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入</description>
+      <description>Map接口 双列集合，用来存储一对(key - value)一对的数据</description>
     </item>
     
     <item>
@@ -30,8 +24,7 @@ if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length;
       <pubDate>Wed, 24 Feb 2021 14:17:11 +0800</pubDate>
       
       <guid>https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/</guid>
-      <description>思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源
- /*** 针对不同表的通用查询操作，返回多条数据* @param c 泛型为对应表的实体类的Class实例* @param sql 执行的SQL语句* @param args 占位符参数* @param &amp;lt;T&amp;gt; 对应表的实体类* @return 返回对应表的实体类对象集合*/public &amp;lt;T&amp;gt; List&amp;lt;T&amp;gt; getForList(Class&amp;lt;T&amp;gt; c, String sql, Object... args) {List&amp;lt;T&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();Connection conn = null;PreparedStatement ps = null;ResultSet rs = null;try {//1.获取连接conn = JDBCUtils.getConnection();//2.预编译SQL返回PreparedStatement实例ps = conn.prepareStatement(sql);//3.处理占位符for (int i = 0; i &amp;lt; args.</description>
+      <description>思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源</description>
     </item>
     
     <item>
@@ -40,8 +33,7 @@ if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length;
       <pubDate>Wed, 24 Feb 2021 14:15:32 +0800</pubDate>
       
       <guid>https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/</guid>
-      <description>思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。
- /*** 被代理类实现的接口* @author ObitoSnn*/public interface Game {void playGame(String gameName);} /*** 被代理类* @author ObitoSnn*/public class User implements Game {@Overridepublic void playGame(String gameName) {System.out.println(&amp;quot;用户玩&amp;quot; + gameName);}} /*** @author ObitoSnn*/public class ProxyFactory {public static Object getProxyInstance(Object target) {MyInvocationHandler handler = new MyInvocationHandler();handler.init(target);Object proxyInstance = Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),handler);return proxyInstance;}/*** 自定义内部类实现InvocationHandler接口*/private static class MyInvocationHandler implements InvocationHandler {//被代理类对象private Object target;/*** 指明被代理类的对象* @param target*/public void init(Object target) {this.</description>
+      <description>思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。</description>
     </item>
     
     <item>
@@ -50,8 +42,7 @@ if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length;
       <pubDate>Wed, 24 Feb 2021 14:10:11 +0800</pubDate>
       
       <guid>https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/</guid>
-      <description>思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。
- /*** 实现TCP的网络编程* 例题2：客户端发送文件给服务端，服务端将文件保存在本地。* @Author: obito799* @Description:* @Date 2020/10/15 23:06*/public class TCPTest2 {@Testpublic void client() {Socket socket = null;OutputStream os = null;BufferedInputStream bis = null;try {//创建客户端Socket，指明服务器端IP和端口号String severAddress = InetAddress.getLocalHost().getHostAddress();//本机IP地址socket = new Socket(severAddress, 8899);//因为是在同一台电脑上，所以IP地址为本机地址//获取流os = socket.getOutputStream();//数据处理bis = new BufferedInputStream(new FileInputStream(&amp;quot;Sasuke.jpg&amp;quot;));byte[] buffer = new byte[1024];int len;while ((len = bis.read(buffer)) !</description>
+      <description>思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。</description>
     </item>
     
     <item>
@@ -60,13 +51,7 @@ if ((tab = table) == null || (n = tab.length) == 0)n = (tab = resize()).length;
       <pubDate>Tue, 23 Feb 2021 22:22:48 +0800</pubDate>
       
       <guid>https://ObitoSnn.gitee.io/posts/object%E7%B1%BB%E6%A6%82%E8%BF%B0/</guid>
-      <description>Object类概述 Object在java.lang包下，Object类是所有类的根类。每个类都使用 Object 作为父类(超类)
-常用方法 String toString() 源码 Object中toString()返回的是由全类名(类的全限定名称) + @ + 由参数以十六进制表示的无符号整数值的字符串
-补充： 如果直接打印一个引用数据类型的对象，那么系统会自动调用其toString方法
-boolean equals(Object obj) 源码 可以看到Object类中原始的equals方法里面使用的就是==等号比较的
-补充： ① 如果比较两个引用数据类型的时候，使用==比较的是内存地址 ② 如果要比较两个引用数据类型中的内容是否一致，要使用equals方法 ③ 比较两个自定义类型时，需要重写equals方法，否则会调用Object中的equals方法
-Class&amp;lt;?&amp;gt; getClass() 源码 返回的是一个运行时类(加载至内存中的类)的对象，这个方法是反射的源头，获取运行时类对象，之后用这个对象调用reflect包下与反射相关的方法
-native关键字： Java平台有个用户和本地C代码进行互操作的API，称为Java Native Interface (Java本地接口)，Java语言本身不能对操作系统底层进行访问和操作，但是可以通过JNI接口调用其他语言来实现对底层的访问</description>
+      <description>Object类概述 Object在java.lang包下，Object类是所有类的根类。每个类都使用 Object 作为父类(超类)</description>
     </item>
     
     <item>
@@ -75,8 +60,7 @@ native关键字： Java平台有个用户和本地C代码进行互操作的API�
       <pubDate>Tue, 23 Feb 2021 22:22:30 +0800</pubDate>
       
       <guid>https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/</guid>
-      <description>思路： ①创建文件及相应的流。 ②处理数据：读入和写出。补充：处理文本中字符出现的次数(方式一：将文本文件的字符添加到list，再将字符作为key存入map中，value为字符出现次数；方式二：也可以直接将读入字符存入map中) ③关闭资源。
- /*** 记录文本文件内所有字符出现的次数* @param srcPath 待记录的文本文件(绝对路径，文件后缀名为txt)* @param destPath 将记录的数据写入到该文本文件下(绝对路径，文件后缀名为txt)*/public void countForFileWords(String srcPath, String destPath) {List&amp;lt;Character&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();//将文件字符存储到list中Map&amp;lt;Character, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();//将list中数据存入map中，value记录字符出现的次数BufferedReader br = null;BufferedWriter bw = null;try {//1.创建文件及相应的流br = new BufferedReader(new FileReader(srcPath));bw = new BufferedWriter(new FileWriter(destPath));//2.处理数据：读入和写出int data;//2.1读入文本文件，并将出现的字符添加到list中while ((data = br.read()) != -1) {char ch;ch = (char) data;list.add(ch);}//key为文本中出现的字符，value为该字符出现的次数for (Character c : list) {Integer count = map.</description>
+      <description>思路： ①创建文件及相应的流。 ②处理数据：读入和写出。补充：处理文本中字符出现的次数(方式一：将文本文件的字符添加到list，再将字符作为key存入map中，value为字符出现次数；方式二：也可以直接将读入字符存入map中) ③关闭资源。</description>
     </item>
     
   </channel>

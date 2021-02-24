@@ -45,8 +45,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
-  content="思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源
- /*** 针对不同表的通用查询操作，返回多条数据* @param c 泛型为对应表的实体类的Class实例* @param sql 执行的SQL语句* @param args 占位符参数* @param &lt;T&gt; 对应表的实体类* @return 返回对应表的实体类对象集合*/public &lt;T&gt; List&lt;T&gt; getForList(Class&lt;T&gt; c, String sql, Object... args) {List&lt;T&gt; list = new ArrayList&lt;&gt;();Connection conn = null;PreparedStatement ps = null;ResultSet rs = null;try {//1.获取连接conn = JDBCUtils.getConnection();//2.预编译SQL返回PreparedStatement实例ps = conn.prepareStatement(sql);//3.处理占位符for (int i = 0; i &lt; args.">
+  content="思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -82,13 +81,13 @@
     },
     "publisher": {
         "@type": "Person",
-        "name": "C. Wang",
+        "name": "ObitoSnn",
         "logo": {
             "@type": "ImageObject",
             "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源\n \/**\r* 针对不同表的通用查询操作，返回多条数据\r* @param c 泛型为对应表的实体类的Class实例\r* @param sql 执行的SQL语句\r* @param args 占位符参数\r* @param \u0026lt;T\u0026gt; 对应表的实体类\r* @return 返回对应表的实体类对象集合\r*\/\rpublic \u0026lt;T\u0026gt; List\u0026lt;T\u0026gt; getForList(Class\u0026lt;T\u0026gt; c, String sql, Object... args) {\rList\u0026lt;T\u0026gt; list = new ArrayList\u0026lt;\u0026gt;();\rConnection conn = null;\rPreparedStatement ps = null;\rResultSet rs = null;\rtry {\r\/\/1.获取连接\rconn = JDBCUtils.getConnection();\r\/\/2.预编译SQL返回PreparedStatement实例\rps = conn.prepareStatement(sql);\r\/\/3.处理占位符\rfor (int i = 0; i \u0026lt; args."
+    "description": "思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源"
 }
 </script><meta property="og:title" content="JDBC——针对不同表的通用查询操作，返回多条数据 | 主页" />
 <meta property="og:type" content="article" />
@@ -102,8 +101,7 @@
 
 
 
-<meta property="og:description" content="思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源
- /*** 针对不同表的通用查询操作，返回多条数据* @param c 泛型为对应表的实体类的Class实例* @param sql 执行的SQL语句* @param args 占位符参数* @param &lt;T&gt; 对应表的实体类* @return 返回对应表的实体类对象集合*/public &lt;T&gt; List&lt;T&gt; getForList(Class&lt;T&gt; c, String sql, Object... args) {List&lt;T&gt; list = new ArrayList&lt;&gt;();Connection conn = null;PreparedStatement ps = null;ResultSet rs = null;try {//1.获取连接conn = JDBCUtils.getConnection();//2.预编译SQL返回PreparedStatement实例ps = conn.prepareStatement(sql);//3.处理占位符for (int i = 0; i &lt; args." />
+<meta property="og:description" content="思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源" />
 
 
 
