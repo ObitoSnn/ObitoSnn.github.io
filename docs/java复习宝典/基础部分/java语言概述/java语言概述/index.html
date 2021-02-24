@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>Java语言概述 | Javase复习宝典 | 主页</title>
+<link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
+<script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="Java语言概述 基础常识  软件：即一系列按照特定顺序组织的计算机数据和指令的集合，系统软件和应用软件  系统软件：windows , mac os , linux ,unix,android,ios,&hellip;. 应用软件：word ,ppt,画图板,&hellip;    常用DOS命令：
+   命令 描述     dir 列出当前目录下的文件以及文件夹   md 创建目录   rd 删除目录   cd 进入指定目录   cd.. 退回上一级目录   cd\ 返回到根目录   del 删除文件   exit 退出dos命令行   echo 字符串 &gt; 文件名.扩展名 可以将字符串输入到后边指定的文件中    常用快捷键：
+   命令 描述     ← → 移动光标   ↑ ↓ 调阅历史操作命令   delete和backspace 删除字符    计算机语言的发展迭代史  第一代：机器语言 第二代：汇编语言 第三代：高级语言  面向过程：C，Pascal，Fortran 面向对象：Java，JS，Python，Scala    Java语言版本迭代概述  1991年 Green项目，开发语言最初命名为Oak (橡树) 1994年，开发组意识到Oak 非常适合于互联网 1996年，发布JDK 1.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文档",
+      "item":"https://ObitoSnn.gitee.io/docs/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Javase复习宝典",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"基础部分",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/"},{
+      "@type": "ListItem",
+      "position": 4 ,
+      "name":"Java语言概述",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/"},{
+      "@type": "ListItem",
+      "position": 5 ,
+      "name":"Java语言概述",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/"
+    },
+    "headline": "Java语言概述 | Javase复习宝典 | 主页","datePublished": "2021-02-24T12:29:00+08:00",
+    "dateModified": "2021-02-24T12:13:00+08:00",
+    "wordCount":  105 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://ObitoSnn.gitee.io/images/icon.png"
+        }
+        },
+    "description": "Java语言概述 基础常识  软件：即一系列按照特定顺序组织的计算机数据和指令的集合，系统软件和应用软件  系统软件：windows , mac os , linux ,unix,android,ios,\u0026hellip;. 应用软件：word ,ppt,画图板,\u0026hellip;    常用DOS命令：\n   命令 描述     dir 列出当前目录下的文件以及文件夹   md 创建目录   rd 删除目录   cd 进入指定目录   cd.. 退回上一级目录   cd\\ 返回到根目录   del 删除文件   exit 退出dos命令行   echo 字符串 \u0026gt; 文件名.扩展名 可以将字符串输入到后边指定的文件中    常用快捷键：\n   命令 描述     ← → 移动光标   ↑ ↓ 调阅历史操作命令   delete和backspace 删除字符    计算机语言的发展迭代史  第一代：机器语言 第二代：汇编语言 第三代：高级语言  面向过程：C，Pascal，Fortran 面向对象：Java，JS，Python，Scala    Java语言版本迭代概述  1991年 Green项目，开发语言最初命名为Oak (橡树) 1994年，开发组意识到Oak 非常适合于互联网 1996年，发布JDK 1."
+}
+</script><meta property="og:title" content="Java语言概述 | Javase复习宝典 | 主页" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://ObitoSnn.gitee.io/images/icon.png">
+
+
+<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/" />
+
+
+
+
+<meta property="og:description" content="Java语言概述 基础常识  软件：即一系列按照特定顺序组织的计算机数据和指令的集合，系统软件和应用软件  系统软件：windows , mac os , linux ,unix,android,ios,&hellip;. 应用软件：word ,ppt,画图板,&hellip;    常用DOS命令：
+   命令 描述     dir 列出当前目录下的文件以及文件夹   md 创建目录   rd 删除目录   cd 进入指定目录   cd.. 退回上一级目录   cd\ 返回到根目录   del 删除文件   exit 退出dos命令行   echo 字符串 &gt; 文件名.扩展名 可以将字符串输入到后边指定的文件中    常用快捷键：
+   命令 描述     ← → 移动光标   ↑ ↓ 调阅历史操作命令   delete和backspace 删除字符    计算机语言的发展迭代史  第一代：机器语言 第二代：汇编语言 第三代：高级语言  面向过程：C，Pascal，Fortran 面向对象：Java，JS，Python，Scala    Java语言版本迭代概述  1991年 Green项目，开发语言最初命名为Oak (橡树) 1994年，开发组意识到Oak 非常适合于互联网 1996年，发布JDK 1." />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="主页" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-02-24T12:29:00&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-02-24T12:13:00&#43;08:00" />
+
+
+
+<meta property="article:section" content="docs" />
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">主页</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于我</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文章</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文档</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="lg:pt-12">
+    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
+        <div class="md:w-1/4 lg:w-1/5 border-r">
+            <div class="sticky top-16 pt-6">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
+    <span class="font-semibold">目录</span>
+    <i class="fas fa-caret-right ml-1"></i>
+</div>
+
+<div id="sidebar-toc"
+    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
+    <div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
+        <a class=" hover:text-eureka"
+            href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/">Javase复习宝典</a>
+        
+        
+        
+
+
+    </div>
+    
+<ul class="pl-6">
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/">基础部分</a>
+        </div>
+        
+        
+<ul class="pl-6">
+    
+    
+    
+    <li class="py-2">
+        <div class=" pb-2 ">
+            <a class=" hover:text-eureka"
+                href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">Java语言概述</a>
+        </div>
+        
+        
+<ul class="pl-6">
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" text-eureka  hover:text-eureka"
+                href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/">Java语言概述</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/">开发环境的搭建</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/%E7%AC%AC%E4%B8%80%E4%B8%AAjava%E7%A8%8B%E5%BA%8F/">第一个Java程序</a>
+        </div>
+        
+    </li>
+    
+    
+    
+    
+    <li class="py-2">
+        <div class="">
+            <a class=" hover:text-eureka"
+                href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/%E6%B3%A8%E9%87%8A%E4%B8%8Eapi%E6%96%87%E6%A1%A3%E7%AD%89/">注释与API文档等</a>
+        </div>
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+</ul>
+
+        
+    </li>
+    
+    
+</ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
+            <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
+                <h1 class="font-bold text-3xl text-primary-text">Java语言概述</h1>
+                <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-02-24</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+
+    
+</div>
+            </div>
+            <div class="flex">
+                <div class="w-full lg:w-3/4 px-6">
+                    
+                    
+                    <div class="content">
+                        <h1 id="java语言概述">Java语言概述</h1>
+<h2 id="基础常识">基础常识</h2>
+<ul>
+<li>软件：即一系列按照特定顺序组织的计算机数据和指令的集合，系统软件和应用软件
+<ul>
+<li>系统软件：windows , mac os , linux ,unix,android,ios,&hellip;.</li>
+<li>应用软件：word ,ppt,画图板,&hellip;</li>
+</ul>
+</li>
+</ul>
+<p>常用DOS命令：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">dir</td>
+<td style="text-align:left">列出当前目录下的文件以及文件夹</td>
+</tr>
+<tr>
+<td style="text-align:left">md</td>
+<td style="text-align:left">创建目录</td>
+</tr>
+<tr>
+<td style="text-align:left">rd</td>
+<td style="text-align:left">删除目录</td>
+</tr>
+<tr>
+<td style="text-align:left">cd</td>
+<td style="text-align:left">进入指定目录</td>
+</tr>
+<tr>
+<td style="text-align:left">cd..</td>
+<td style="text-align:left">退回上一级目录</td>
+</tr>
+<tr>
+<td style="text-align:left">cd\</td>
+<td style="text-align:left">返回到根目录</td>
+</tr>
+<tr>
+<td style="text-align:left">del</td>
+<td style="text-align:left">删除文件</td>
+</tr>
+<tr>
+<td style="text-align:left">exit</td>
+<td style="text-align:left">退出dos命令行</td>
+</tr>
+<tr>
+<td style="text-align:left">echo 字符串 &gt; 文件名.扩展名</td>
+<td style="text-align:left">可以将字符串输入到后边指定的文件中</td>
+</tr>
+</tbody>
+</table>
+<p>常用快捷键：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">←   →</td>
+<td style="text-align:left">移动光标</td>
+</tr>
+<tr>
+<td style="text-align:left">↑   ↓</td>
+<td style="text-align:left">调阅历史操作命令</td>
+</tr>
+<tr>
+<td style="text-align:left">delete和backspace</td>
+<td style="text-align:left">删除字符</td>
+</tr>
+</tbody>
+</table>
+<h2 id="计算机语言的发展迭代史">计算机语言的发展迭代史</h2>
+<ul>
+<li>第一代：机器语言</li>
+<li>第二代：汇编语言</li>
+<li>第三代：高级语言
+<ul>
+<li>面向过程：C，Pascal，Fortran</li>
+<li>面向对象：Java，JS，Python，Scala</li>
+</ul>
+</li>
+</ul>
+<h2 id="java语言版本迭代概述">Java语言版本迭代概述</h2>
+<ul>
+<li>1991年 Green项目，开发语言最初命名为Oak (橡树)</li>
+<li>1994年，开发组意识到Oak 非常适合于互联网</li>
+<li><font color=red><em><strong>1996年，发布JDK 1.0</strong></em></font>，约8.3万个网页应用Java技术来制作</li>
+<li>1997年，发布JDK 1.1，JavaOne会议召开，创当时全球同类会议规模之最</li>
+<li>1998年，发布JDK 1.2，同年发布企业平台J2EE</li>
+<li>1999年，Java分成J2SE、J2EE和J2ME，JSP/Servlet技术诞生</li>
+<li>2004年，<font color=red><em><strong>发布里程碑式版本：JDK 1.5，为突出此版本的重要性，更名为JDK 5.0</strong></em></font></li>
+<li>2005年，<font color=red><em><strong>J2SE -&gt; JavaSE，J2EE -&gt; JavaEE，J2ME -&gt; JavaME</strong></em></font></li>
+<li>2009年，Oracle公司收购SUN，交易价格74亿美元</li>
+<li>2011年，发布JDK 7.0</li>
+<li>2014年，<font color=red><em><strong>发布JDK 8.0，是继JDK 5.0以来变化最大的版本</strong></em></font></li>
+<li>2017年，发布JDK 9.0，最大限度实现模块化</li>
+<li>2018年3月，发布JDK 10.0，版本号也称为18.3</li>
+<li>2018年9月，发布JDK 11.0，版本号也称为18.9</li>
+</ul>
+<h2 id="java语言应用的领域">Java语言应用的领域</h2>
+<ul>
+<li>Java Web开发：后台开发</li>
+<li>大数据开发</li>
+<li>Android应用程序开发：客户端开发</li>
+</ul>
+<h2 id="java语言的特点">Java语言的特点</h2>
+<ul>
+<li>面向对象性：
+<ul>
+<li>两个要素：类、对象</li>
+<li>三个特征：封装、继承、多态</li>
+</ul>
+</li>
+<li>健壮性：
+<ul>
+<li>去除了C语言中的指针</li>
+<li>自动的垃圾回收机制 (仍然会出现内存溢出、内存泄漏)</li>
+</ul>
+</li>
+<li>跨平台型：
+<ul>
+<li>write once,run anywhere：一次编译，到处运行；功劳归功于：JVM</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20210223164648989.png" alt="在这里插入图片描述"></p>
+
+                    </div>
+                    
+                    
+
+                    
+
+                    
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/" class="block">开发环境的搭建</a>
+        
+    </div>
+</div>
+
+                    
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
+                    <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-secondary-bg pt-16 -mt-16 ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6  pt-10 -mt-10 border-l ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基础常识">基础常识</a></li>
+    <li><a href="#计算机语言的发展迭代史">计算机语言的发展迭代史</a></li>
+    <li><a href="#java语言版本迭代概述">Java语言版本迭代概述</a></li>
+    <li><a href="#java语言应用的领域">Java语言应用的领域</a></li>
+    <li><a href="#java语言的特点">Java语言的特点</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        hljs.initHighlightingOnLoad();
+        changeSidebarHeight();
+        switchDocToc();
+    })
+</script>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="javascript:void(0);">ObitoSnn</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

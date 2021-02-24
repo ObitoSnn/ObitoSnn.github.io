@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>JDBC——针对不同表的通用查询操作，返回多条数据 | 主页</title>
+<link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
+<script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源
+ /** * 针对不同表的通用查询操作，返回多条数据 * @param c 泛型为对应表的实体类的Class实例 * @param sql 执行的SQL语句 * @param args 占位符参数 * @param &lt;T&gt; 对应表的实体类 * @return 返回对应表的实体类对象集合 */ public &lt;T&gt; List&lt;T&gt; getForList(Class&lt;T&gt; c, String sql, Object... args) { List&lt;T&gt; list = new ArrayList&lt;&gt;(); Connection conn = null; PreparedStatement ps = null; ResultSet rs = null; try { //1.获取连接 conn = JDBCUtils.getConnection(); //2.预编译SQL返回PreparedStatement实例 ps = conn.prepareStatement(sql); //3.处理占位符 for (int i = 0; i &lt; args.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文章",
+      "item":"https://ObitoSnn.gitee.io/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"JDBC——针对不同表的通用查询操作，返回多条数据",
+      "item":"https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/"
+    },
+    "headline": "JDBC——针对不同表的通用查询操作，返回多条数据 | 主页","datePublished": "2021-02-24T14:17:11+08:00",
+    "dateModified": "2021-02-24T14:17:11+08:00",
+    "wordCount":  335 ,
+    "author": {
+        "@type": "Person",
+        "name": [""]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://ObitoSnn.gitee.io/images/icon.png"
+        }
+        },
+    "description": "思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源\n \/** * 针对不同表的通用查询操作，返回多条数据 * @param c 泛型为对应表的实体类的Class实例 * @param sql 执行的SQL语句 * @param args 占位符参数 * @param \u0026lt;T\u0026gt; 对应表的实体类 * @return 返回对应表的实体类对象集合 *\/ public \u0026lt;T\u0026gt; List\u0026lt;T\u0026gt; getForList(Class\u0026lt;T\u0026gt; c, String sql, Object... args) { List\u0026lt;T\u0026gt; list = new ArrayList\u0026lt;\u0026gt;(); Connection conn = null; PreparedStatement ps = null; ResultSet rs = null; try { \/\/1.获取连接 conn = JDBCUtils.getConnection(); \/\/2.预编译SQL返回PreparedStatement实例 ps = conn.prepareStatement(sql); \/\/3.处理占位符 for (int i = 0; i \u0026lt; args."
+}
+</script><meta property="og:title" content="JDBC——针对不同表的通用查询操作，返回多条数据 | 主页" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://ObitoSnn.gitee.io/images/icon.png">
+
+
+<meta property="og:url" content="https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/" />
+
+
+
+
+<meta property="og:description" content="思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源
+ /** * 针对不同表的通用查询操作，返回多条数据 * @param c 泛型为对应表的实体类的Class实例 * @param sql 执行的SQL语句 * @param args 占位符参数 * @param &lt;T&gt; 对应表的实体类 * @return 返回对应表的实体类对象集合 */ public &lt;T&gt; List&lt;T&gt; getForList(Class&lt;T&gt; c, String sql, Object... args) { List&lt;T&gt; list = new ArrayList&lt;&gt;(); Connection conn = null; PreparedStatement ps = null; ResultSet rs = null; try { //1.获取连接 conn = JDBCUtils.getConnection(); //2.预编译SQL返回PreparedStatement实例 ps = conn.prepareStatement(sql); //3.处理占位符 for (int i = 0; i &lt; args." />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="主页" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-02-24T14:17:11&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-02-24T14:17:11&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="学习笔记" />
+
+
+
+
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/" />
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/" />
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/object%E7%B1%BB%E6%A6%82%E8%BF%B0/" />
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">主页</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于我</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">JDBC——针对不同表的通用查询操作，返回多条数据</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-02-24</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://ObitoSnn.gitee.io/categories/java/" class="hover:text-eureka">java</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <blockquote>
+<p>思路：
+① 获取连接
+② 预编译SQL返回PreparedStatement实例
+③ 处理占位符
+④ 执行操作返回ResultSet并处理结果集
+⑤ 关闭资源</p>
+</blockquote>
+<pre><code class="language-java">    /**
+     * 针对不同表的通用查询操作，返回多条数据
+     * @param c 泛型为对应表的实体类的Class实例
+     * @param sql 执行的SQL语句
+     * @param args 占位符参数
+     * @param &lt;T&gt; 对应表的实体类
+     * @return 返回对应表的实体类对象集合
+     */
+    public &lt;T&gt; List&lt;T&gt; getForList(Class&lt;T&gt; c, String sql, Object... args) {
+        List&lt;T&gt; list = new ArrayList&lt;&gt;();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            //1.获取连接
+            conn = JDBCUtils.getConnection();
+            //2.预编译SQL返回PreparedStatement实例
+            ps = conn.prepareStatement(sql);
+            //3.处理占位符
+            for (int i = 0; i &lt; args.length; i++) {
+                ps.setObject(i + 1, args[i]);
+            }
+            //4.执行操作返回ResultSet并处理结果集
+            rs = ps.executeQuery();
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int columnCount = rsmd.getColumnCount();
+            //判断结果集是否有数据
+            while (rs.next()) {
+                T t = c.newInstance();
+                //处理结果集中的一行数据：给t的指定属性赋值
+                for (int i = 0; i &lt; columnCount; i++) {
+                    String columnLabel = rsmd.getColumnLabel(i + 1);
+                    Object colValue = rs.getObject(i + 1);
+                    Field field = c.getDeclaredField(columnLabel);
+                    field.setAccessible(true);
+                    field.set(t, colValue);
+                }
+                //将一行数据封装到T的实例中，并将其添加到list
+                list.add(t);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            //5.关闭资源
+            JDBCUtils.closeResource(conn, ps, rs);
+        }
+        return null;
+    }
+</code></pre>
+<blockquote>
+<p>操作数据库的工具类</p>
+</blockquote>
+<pre><code class="language-java">/**
+ * 操作数据库的工具类
+ * @author obito799
+ */
+public class JDBCUtils {
+	/**
+	 * 获取数据库连接 
+	 * @author obito799		
+	 * @return 返回Connection实例
+	 * @throws Exception :
+	 */
+	public static Connection getConnection() throws Exception {
+		//1.加载并读取配置文件中的4个基本信息
+		//配置文件默认识别为当前module的src下
+		InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream(&quot;jdbc.properties&quot;);
+		Properties pr = new Properties();
+		pr.load(is);
+		String user = pr.getProperty(&quot;user&quot;);
+		String password = pr.getProperty(&quot;password&quot;);
+		String url = pr.getProperty(&quot;url&quot;);
+		String driverClass = pr.getProperty(&quot;driverClass&quot;);
+		//2.注册驱动
+		Class.forName(driverClass);
+		//3.通过DriverManager获取连接
+		return DriverManager.getConnection(url, user, password);
+	}
+	/**
+	 * 关闭Connection和Statement操作
+	 * @author obito799		
+	 * @param conn 需要关闭的Connection实例
+	 * @param s 需要关闭的Statement实例
+	 */
+	public static void closeResource(Connection conn, Statement s) {
+		try {
+			if (conn != null)
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if (s != null)
+			s.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void closeResource(Connection conn, Statement s, ResultSet rs) {
+		try {
+			if (conn != null)
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if (s != null)
+			s.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			if (rs != null)
+			rs.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}
+</code></pre>
+
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://ObitoSnn.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#学习笔记</a>
+    
+</div>
+        
+        
+        
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/" class="block">浅谈Map</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/" class="block">Java 反射机制——动态代理举例</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/">Java 反射机制——动态代理举例</a>
+            <br />
+            
+            <a href="https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/">Java TCP网络编程——客户端发送文件给服务端，服务端将文件保存在本地</a>
+            <br />
+            
+            <a href="https://ObitoSnn.gitee.io/posts/object%E7%B1%BB%E6%A6%82%E8%BF%B0/">Object类概述</a>
+            <br />
+            
+            <a href="https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/">Java IO流——获取文本上字符出现的次数,把数据写入文件</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="javascript:void(0);">ObitoSnn</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

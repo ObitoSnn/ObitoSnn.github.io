@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>浅谈Map | 主页</title>
+<link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
+<script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="Map接口 双列集合，用来存储一对(key - value)一对的数据
+Map接口实现类体系结构 HashMap 哈希表（hash table） 相当于是一个书架，其实是数组&#43;链表
+HashMap底层 数组&#43;链表 (JDK7及之前)，数组&#43;链表&#43;红黑树(JDK8)
+HashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64
+源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组
+V put(K key, V value) 判断hashtable是否存在，如果不存在则创建
+if ((tab = table) == null || (n = tab.length) == 0) n = (tab = resize()).length;  判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文章",
+      "item":"https://ObitoSnn.gitee.io/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"浅谈Map",
+      "item":"https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/"
+    },
+    "headline": "浅谈Map | 主页","datePublished": "2021-02-24T14:19:01+08:00",
+    "dateModified": "2021-02-24T14:19:01+08:00",
+    "wordCount":  243 ,
+    "author": {
+        "@type": "Person",
+        "name": [""]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://ObitoSnn.gitee.io/images/icon.png"
+        }
+        },
+    "description": "Map接口 双列集合，用来存储一对(key - value)一对的数据\nMap接口实现类体系结构 HashMap 哈希表（hash table） 相当于是一个书架，其实是数组\u002b链表\nHashMap底层 数组\u002b链表 (JDK7及之前)，数组\u002b链表\u002b红黑树(JDK8)\nHashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64\n源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组\nV put(K key, V value) 判断hashtable是否存在，如果不存在则创建\nif ((tab = table) == null || (n = tab.length) == 0) n = (tab = resize()).length;  判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入"
+}
+</script><meta property="og:title" content="浅谈Map | 主页" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://ObitoSnn.gitee.io/images/icon.png">
+
+
+<meta property="og:url" content="https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/" />
+
+
+
+
+<meta property="og:description" content="Map接口 双列集合，用来存储一对(key - value)一对的数据
+Map接口实现类体系结构 HashMap 哈希表（hash table） 相当于是一个书架，其实是数组&#43;链表
+HashMap底层 数组&#43;链表 (JDK7及之前)，数组&#43;链表&#43;红黑树(JDK8)
+HashMap源码分析 HashMap中的几个属性 ① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16 ② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75 ③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12 ④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8 ⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64
+源码 HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table 补充 JDK8相较于JDK7在底层实现方面不同： ① new HashMap()：底层没有创建一个长度为16的数组 ② JDK8底层的数组是Node[]，而非Entry[] ③ 首次调用put()时，底层创建长度为16的数组
+V put(K key, V value) 判断hashtable是否存在，如果不存在则创建
+if ((tab = table) == null || (n = tab.length) == 0) n = (tab = resize()).length;  判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="主页" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-02-24T14:19:01&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-02-24T14:19:01&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="学习笔记" />
+
+
+
+
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/" />
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/" />
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/" />
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/object%E7%B1%BB%E6%A6%82%E8%BF%B0/" />
+
+<meta property="og:see_also" content="https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">主页</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于我</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">浅谈Map</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-02-24</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://ObitoSnn.gitee.io/categories/java/" class="hover:text-eureka">java</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="map接口">Map接口</h2>
+<p>双列集合，用来存储一对(key - value)一对的数据</p>
+<h2 id="map接口实现类体系结构">Map接口实现类体系结构</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210109143342295.png" alt="在这里插入图片描述"></p>
+<h2 id="hashmap">HashMap</h2>
+<h3 id="哈希表hash-table">哈希表（hash table）</h3>
+<p>相当于是一个书架，其实是数组+链表</p>
+<h3 id="hashmap底层">HashMap底层</h3>
+<p>数组+链表 (JDK7及之前)，数组+链表+红黑树(JDK8)</p>
+<h3 id="hashmap源码分析">HashMap源码分析</h3>
+<p>HashMap中的几个属性
+① DEFAULT_INITIAL_CAPACITY : HashMap的默认容量，16
+② DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75
+③ threshold：扩容的临界值 = 容量*填充因子：16 * 0.75 = 12，调用HashMap的空参构造器， 默认扩容的临界值为12
+④ TREEIFY_THRESHOLD：Bucket中链表长度大于该默认值，转化为红黑树：8
+⑤ MIN_TREEIFY_CAPACITY：桶中的Node被树化时最小的hash表容量：64</p>
+<p>源码
+<img src="https://img-blog.csdnimg.cn/20210109144611682.png" alt="在这里插入图片描述"></p>
+<p>HashMap map = new HashMap(); 在实例化以后，首次调用put()底层创建了长度是16的一维数组Node[] table
+补充
+JDK8相较于JDK7在底层实现方面不同：
+① new HashMap()：底层没有创建一个长度为16的数组
+② JDK8底层的数组是Node[]，而非Entry[]
+③ 首次调用put()时，底层创建长度为16的数组</p>
+<h3 id="v-putk-key-v-value">V put(K key, V value)</h3>
+<p>判断hashtable是否存在，如果不存在则创建</p>
+<pre><code class="language-java">if ((tab = table) == null || (n = tab.length) == 0)
+	n = (tab = resize()).length;
+</code></pre>
+<p>判断当前数组下标对应的元素是否为null，如果是则创建一个Node对象放入</p>
+<pre><code class="language-java">if ((p = tab[i = (n - 1) &amp; hash]) == null)
+	tab[i] = newNode(hash, key, value, null);
+</code></pre>
+<p>如果传入的key在哈希表中存在的话，进行数据的替换</p>
+<pre><code class="language-java">if (p.hash == hash &amp;&amp;
+	((k = p.key) == key || (key != null &amp;&amp; key.equals(k))))
+	e = p;
+</code></pre>
+<p>判断当前节点是否是红黑树</p>
+<pre><code class="language-java">else if (p instanceof TreeNode)
+</code></pre>
+<p>如果链表的长度大于8并且数组长度大于64时，会将链表转成红黑树
+补充
+因为binCount从0开始，所以binCount &gt;= 7即链表长度大于8时进入treeifyBin(tab, hash)</p>
+<pre><code class="language-java">for (int binCount = 0; ; ++binCount) {//binCount记录哈希桶中链表的长度
+	if ((e = p.next) == null) {
+	    p.next = newNode(hash, key, value, null);
+	    if (binCount &gt;= TREEIFY_THRESHOLD - 1) //TREEIFY_THRESHOLD = 8，
+	        treeifyBin(tab, hash);
+	    break;
+	}
+	...代码省略
+</code></pre>
+<p>在treeifyBin(tab, hash)中哈希桶的长度小于64就扩容，并不是链表长度大于8就变成红黑树
+所以链表的长度大于8并且哈希桶长度大于64时，才会将链表转成红黑树</p>
+<pre><code class="language-java">if (tab == null || (n = tab.length) &lt; MIN_TREEIFY_CAPACITY)//MIN_TREEIFY_CAPACITY = 64
+	resize();	
+</code></pre>
+<h3 id="为什么初始长度是2的n次幂">为什么初始长度是2的n次幂</h3>
+<p>为了保证根据hash计算出索引位置的正确性，底层使用的是 &amp; 位与运算计算出数据在哈希桶的索引位置
+<img src="https://img-blog.csdnimg.cn/20210109224434596.png" alt="在这里插入图片描述">
+HashMap map = new HashMap(17);
+当手动设置Hash Map初始长度不是2的n次幂，调用tableSizeFor(int cap)计算出比传入参数(cap)大的且离他最近的2的n次幂的值，并将该值赋给threshold</p>
+<pre><code class="language-java">    static final int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n &gt;&gt;&gt; 1;
+        n |= n &gt;&gt;&gt; 2;
+        n |= n &gt;&gt;&gt; 4;
+        n |= n &gt;&gt;&gt; 8;
+        n |= n &gt;&gt;&gt; 16;
+        return (n &lt; 0) ? 1 : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    }
+</code></pre>
+<p>例如：
+如果传入17，则返回32，如果传入13，会返回16</p>
+
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://ObitoSnn.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#学习笔记</a>
+    
+</div>
+        
+        
+        
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/" class="block">JDBC——针对不同表的通用查询操作，返回多条数据</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#map接口">Map接口</a></li>
+    <li><a href="#map接口实现类体系结构">Map接口实现类体系结构</a></li>
+    <li><a href="#hashmap">HashMap</a>
+      <ul>
+        <li><a href="#哈希表hash-table">哈希表（hash table）</a></li>
+        <li><a href="#hashmap底层">HashMap底层</a></li>
+        <li><a href="#hashmap源码分析">HashMap源码分析</a></li>
+        <li><a href="#v-putk-key-v-value">V put(K key, V value)</a></li>
+        <li><a href="#为什么初始长度是2的n次幂">为什么初始长度是2的n次幂</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/">JDBC——针对不同表的通用查询操作，返回多条数据</a>
+            <br />
+            
+            <a href="https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/">Java 反射机制——动态代理举例</a>
+            <br />
+            
+            <a href="https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/">Java TCP网络编程——客户端发送文件给服务端，服务端将文件保存在本地</a>
+            <br />
+            
+            <a href="https://ObitoSnn.gitee.io/posts/object%E7%B1%BB%E6%A6%82%E8%BF%B0/">Object类概述</a>
+            <br />
+            
+            <a href="https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/">Java IO流——获取文本上字符出现的次数,把数据写入文件</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="javascript:void(0);">ObitoSnn</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>
