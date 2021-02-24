@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>文章 | 主页</title>
+<title>javase | 主页</title>
 <link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
 <script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
 
@@ -46,6 +46,21 @@
 
 <meta name="description"
   content="Eureka is a elegant and powerful theme for Hugo.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Series",
+      "item":"https://ObitoSnn.gitee.io/series/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"javase",
+      "item":"https://ObitoSnn.gitee.io/series/javase/"}]
+}
+</script>
 
 
 
@@ -57,32 +72,32 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
-            "name": "Java TCP网络编程——客户端发送文件给服务端，服务端将文件保存在本地",
-            "description": "思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。",
-            "url": "https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/"
+            "name": "浅谈Map",
+            "description": "Map接口 双列集合，用来存储一对(key - value)一对的数据",
+            "url": "https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/"
         },{
             "@type":"ListItem",
             "position":  2 ,
-            "name": "Object类概述",
-            "description": "Object类概述 Object在java.lang包下，Object类是所有类的根类。每个类都使用 Object 作为父类(超类)",
-            "url": "https://ObitoSnn.gitee.io/posts/object%E7%B1%BB%E6%A6%82%E8%BF%B0/"
+            "name": "JDBC——针对不同表的通用查询操作，返回多条数据",
+            "description": "思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源",
+            "url": "https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/"
         },{
             "@type":"ListItem",
             "position":  3 ,
-            "name": "Java IO流——获取文本上字符出现的次数,把数据写入文件",
-            "description": "思路： ①创建文件及相应的流。 ②处理数据：读入和写出。补充：处理文本中字符出现的次数(方式一：将文本文件的字符添加到list，再将字符作为key存入map中，value为字符出现次数；方式二：也可以直接将读入字符存入map中) ③关闭资源。",
-            "url": "https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/"
+            "name": "Java 反射机制——动态代理举例",
+            "description": "思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。",
+            "url": "https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/"
         }
     ]
 }
-</script><meta property="og:title" content="文章 | 主页" />
+</script><meta property="og:title" content="javase | 主页" />
 <meta property="og:type" content="website" />
 
 
 <meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
-<meta property="og:url" content="https://ObitoSnn.gitee.io/posts/" />
+<meta property="og:url" content="https://ObitoSnn.gitee.io/series/javase/" />
 
 
 
@@ -110,10 +125,10 @@
 
 
 
-<meta property="article:section" content="posts" />
+<meta property="article:section" content="series" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/posts/index.xml" title="主页" />
+<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/series/javase/index.xml" title="主页" />
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -133,11 +148,11 @@
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
             <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于我</a>
-            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文章</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
             <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
             <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">按标签分类</a>
-            <a href="/series/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">按系列分类</a>
+            <a href="/series/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">按系列分类</a>
         </div>
 
         <div class="flex">
@@ -187,7 +202,7 @@
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">文章</h1>
+    <h1 class="font-bold text-3xl text-primary-text">javase</h1>
     
 </article>
 <div class="bg-secondary-bg rounded px-6">
@@ -198,10 +213,10 @@
   
   <div class="w-full ">
     <div class="mb-4">
-  <a href="https://ObitoSnn.gitee.io/posts/java-tcp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8F%91%E9%80%81%E6%96%87%E4%BB%B6%E7%BB%99%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%B0%86%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0/" class="font-bold text-xl hover:text-eureka">Java TCP网络编程——客户端发送文件给服务端，服务端将文件保存在本地</a>
+  <a href="https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/" class="font-bold text-xl hover:text-eureka">浅谈Map</a>
 </div>
 <div class="content">
-  思路： ①创建客户端Socket与服务端ServerSocket；调用相应的get方法获取流； ②处理数据：先确定要处理的数据(文本文件、非文本文件或字符串)，确定后考虑使用相应的流处理。补充：本次以处理图片为例(非文本文件)。 ③关闭资源。
+  Map接口 双列集合，用来存储一对(key - value)一对的数据
 </div>
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
@@ -244,20 +259,20 @@
   
   <div class="w-full ">
     <div class="mb-4">
-  <a href="https://ObitoSnn.gitee.io/posts/object%E7%B1%BB%E6%A6%82%E8%BF%B0/" class="font-bold text-xl hover:text-eureka">Object类概述</a>
+  <a href="https://ObitoSnn.gitee.io/posts/jdbc%E9%92%88%E5%AF%B9%E4%B8%8D%E5%90%8C%E8%A1%A8%E7%9A%84%E9%80%9A%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C%E8%BF%94%E5%9B%9E%E5%A4%9A%E6%9D%A1%E6%95%B0%E6%8D%AE/" class="font-bold text-xl hover:text-eureka">JDBC——针对不同表的通用查询操作，返回多条数据</a>
 </div>
 <div class="content">
-  Object类概述 Object在java.lang包下，Object类是所有类的根类。每个类都使用 Object 作为父类(超类)
+  思路： ① 获取连接 ② 预编译SQL返回PreparedStatement实例 ③ 处理占位符 ④ 执行操作返回ResultSet并处理结果集 ⑤ 关闭资源
 </div>
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-23</span>
+        <span>2021-02-24</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
+        <span>2分钟阅读时长</span>
     </div>
     
     
@@ -290,20 +305,20 @@
   
   <div class="w-full ">
     <div class="mb-4">
-  <a href="https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/" class="font-bold text-xl hover:text-eureka">Java IO流——获取文本上字符出现的次数,把数据写入文件</a>
+  <a href="https://ObitoSnn.gitee.io/posts/java-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%B8%BE%E4%BE%8B/" class="font-bold text-xl hover:text-eureka">Java 反射机制——动态代理举例</a>
 </div>
 <div class="content">
-  思路： ①创建文件及相应的流。 ②处理数据：读入和写出。补充：处理文本中字符出现的次数(方式一：将文本文件的字符添加到list，再将字符作为key存入map中，value为字符出现次数；方式二：也可以直接将读入字符存入map中) ③关闭资源。
+  思路： 实现动态代理需要解决的问题： 问题一：如何根据内存中加载的被代理类，动态的创建代理类及其对象。 问题二：当代理类的对象调用方法a时，如何动态的调用被代理类中声明的方法a。
 </div>
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-23</span>
+        <span>2021-02-24</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟阅读时长</span>
+        <span>1分钟阅读时长</span>
     </div>
     
     
@@ -338,22 +353,22 @@
 
 <ul class="pagination">
   <li class="page-item">
-    <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/posts/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/posts/">1</a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/posts/page/2/">2</a>
+    <a href="/series/javase/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
   </li>
   <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/series/javase/">1</a>
   </li>
   <li class="page-item">
-    <a href="/posts/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a class="page-link" href="/series/javase/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a href="/series/javase/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/series/javase/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 

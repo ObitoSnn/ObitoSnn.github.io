@@ -20,6 +20,12 @@
     <loc>https://ObitoSnn.gitee.io/categories/java/</loc>
     <lastmod>2021-02-24T14:19:01+08:00</lastmod>
   </url><url>
+    <loc>https://ObitoSnn.gitee.io/series/javase/</loc>
+    <lastmod>2021-02-24T14:19:01+08:00</lastmod>
+  </url><url>
+    <loc>https://ObitoSnn.gitee.io/series/</loc>
+    <lastmod>2021-02-24T14:19:01+08:00</lastmod>
+  </url><url>
     <loc>https://ObitoSnn.gitee.io/tags/</loc>
     <lastmod>2021-02-24T14:19:01+08:00</lastmod>
   </url><url>
@@ -63,7 +69,5 @@
     <lastmod>2021-02-23T22:22:30+08:00</lastmod>
   </url><url>
     <loc>https://ObitoSnn.gitee.io/authors/</loc>
-  </url><url>
-    <loc>https://ObitoSnn.gitee.io/series/</loc>
   </url>
 </urlset>
