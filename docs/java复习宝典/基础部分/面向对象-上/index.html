@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>基本语法 | Javase复习宝典 | 主页</title>
+<title>面向对象-上 | Javase复习宝典 | 主页</title>
 <link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
 <script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
 
@@ -45,7 +45,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
-  content="  关键字与标识符   代码简洁之道     变量的使用（重点）   进制（了解）   运算符   算术运算符   赋值运算符   比较运算符   逻辑运算符   位运算符   三元运算符     流程控制   分支结构   循环结构   关键字break和continue     ">
+  content="类与对象 类的结构之一：属性 类的结构之二：分法 ">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,8 +65,8 @@
       "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/"},{
       "@type": "ListItem",
       "position": 4 ,
-      "name":"基本语法",
-      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"}]
+      "name":"面向对象-上",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"}]
 }
 </script>
 
@@ -78,9 +78,9 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"
     },
-    "headline": "基本语法 | Javase复习宝典 | 主页","wordCount":  15 ,
+    "headline": "面向对象-上 | Javase复习宝典 | 主页","wordCount":  3 ,
     "publisher": {
         "@type": "Person",
         "name": "ObitoSnn",
@@ -89,16 +89,16 @@
             "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "  关键字与标识符   代码简洁之道     变量的使用（重点）   进制（了解）   运算符   算术运算符   赋值运算符   比较运算符   逻辑运算符   位运算符   三元运算符     流程控制   分支结构   循环结构   关键字break和continue     "
+    "description": "类与对象 类的结构之一：属性 类的结构之二：分法 "
 }
-</script><meta property="og:title" content="基本语法 | Javase复习宝典 | 主页" />
+</script><meta property="og:title" content="面向对象-上 | Javase复习宝典 | 主页" />
 <meta property="og:type" content="website" />
 
 
 <meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
-<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" />
+<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/" />
 
 
 
@@ -122,14 +122,14 @@
 
 
 
-<meta property="og:updated_time" content="2021-02-26T13:26:00&#43;08:00" />
+<meta property="og:updated_time" content="2021-02-26T22:57:59&#43;08:00" />
 
 
 
 <meta property="article:section" content="docs" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.xml" title="主页" />
+<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/index.xml" title="主页" />
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -319,7 +319,7 @@
     
     <li class="py-2">
         <div class=" pb-2 ">
-            <a class=" text-eureka  hover:text-eureka"
+            <a class=" hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">基本语法</a>
         </div>
         
@@ -602,7 +602,7 @@
     
     <li class="py-2">
         <div class=" pb-2 ">
-            <a class=" hover:text-eureka"
+            <a class=" text-eureka  hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/">面向对象-上</a>
         </div>
         
@@ -747,7 +747,7 @@
         </div>
         <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
             <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
-                <h1 class="font-bold text-3xl text-primary-text">基本语法</h1>
+                <h1 class="font-bold text-3xl text-primary-text">面向对象-上</h1>
                 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
@@ -768,59 +768,9 @@
                     
                     
                     <div class="content">
-                        <ul>
-<li>
-<h2 id="font-size2关键字与标识符docsjava复习宝典基础部分基本语法关键字与标识符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/">关键字与标识符</a></font></h2>
-<ul>
-<li>
-<h2 id="font-size2代码简洁之道docsjava复习宝典基础部分基本语法关键字与标识符代码简洁之道font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/%E4%BB%A3%E7%A0%81%E7%AE%80%E6%B4%81%E4%B9%8B%E9%81%93/">代码简洁之道</a></font></h2>
-</li>
-</ul>
-</li>
-<li>
-<h2 id="font-size2变量的使用重点docsjava复习宝典基础部分基本语法变量的使用重点font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8%E9%87%8D%E7%82%B9/">变量的使用（重点）</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2进制了解docsjava复习宝典基础部分基本语法进制了解font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%9B%E5%88%B6%E4%BA%86%E8%A7%A3/">进制（了解）</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2运算符docsjava复习宝典基础部分基本语法运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a></font></h2>
-<ul>
-<li>
-<h2 id="font-size2算术运算符docsjava复习宝典基础部分基本语法运算符算术运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6/">算术运算符</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2赋值运算符docsjava复习宝典基础部分基本语法运算符赋值运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6/">赋值运算符</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2比较运算符docsjava复习宝典基础部分基本语法运算符比较运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6/">比较运算符</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2逻辑运算符docsjava复习宝典基础部分基本语法运算符逻辑运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">逻辑运算符</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2位运算符docsjava复习宝典基础部分基本语法运算符位运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/">位运算符</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2三元运算符docsjava复习宝典基础部分基本语法运算符三元运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/">三元运算符</a></font></h2>
-</li>
-</ul>
-</li>
-<li>
-<h2 id="font-size2流程控制docsjava复习宝典基础部分基本语法流程控制font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">流程控制</a></font></h2>
-<ul>
-<li>
-<h2 id="font-size2分支结构docsjava复习宝典基础部分基本语法流程控制分支结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">分支结构</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2循环结构docsjava复习宝典基础部分基本语法流程控制循环结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2关键字break和continuedocsjava复习宝典基础部分基本语法流程控制关键字break和continuefont"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/%E5%85%B3%E9%94%AE%E5%AD%97break%E5%92%8Ccontinue/">关键字break和continue</a></font></h2>
-</li>
-</ul>
-</li>
-</ul>
+                        <h2 id="font-size2类与对象docsjava复习宝典基础部分面向对象-上类与对象font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">类与对象</a></font></h2>
+<h2 id="font-size2类的结构之一属性docsjava复习宝典基础部分面向对象-上类的结构之一属性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">类的结构之一：属性</a></font></h2>
+<h2 id="font-size2类的结构之二分法docsjava复习宝典基础部分面向对象-上类的结构之二方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">类的结构之二：分法</a></font></h2>
 
                     </div>
                     
@@ -840,21 +790,9 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6  pt-10 -mt-10 border-l ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#font-size2关键字与标识符docsjava复习宝典基础部分基本语法关键字与标识符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/">关键字与标识符</a></font></a></li>
-    <li><a href="#font-size2代码简洁之道docsjava复习宝典基础部分基本语法关键字与标识符代码简洁之道font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E6%A0%87%E8%AF%86%E7%AC%A6/%E4%BB%A3%E7%A0%81%E7%AE%80%E6%B4%81%E4%B9%8B%E9%81%93/">代码简洁之道</a></font></a></li>
-    <li><a href="#font-size2变量的使用重点docsjava复习宝典基础部分基本语法变量的使用重点font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8%E9%87%8D%E7%82%B9/">变量的使用（重点）</a></font></a></li>
-    <li><a href="#font-size2进制了解docsjava复习宝典基础部分基本语法进制了解font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%9B%E5%88%B6%E4%BA%86%E8%A7%A3/">进制（了解）</a></font></a></li>
-    <li><a href="#font-size2运算符docsjava复习宝典基础部分基本语法运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a></font></a></li>
-    <li><a href="#font-size2算术运算符docsjava复习宝典基础部分基本语法运算符算术运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6/">算术运算符</a></font></a></li>
-    <li><a href="#font-size2赋值运算符docsjava复习宝典基础部分基本语法运算符赋值运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6/">赋值运算符</a></font></a></li>
-    <li><a href="#font-size2比较运算符docsjava复习宝典基础部分基本语法运算符比较运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6/">比较运算符</a></font></a></li>
-    <li><a href="#font-size2逻辑运算符docsjava复习宝典基础部分基本语法运算符逻辑运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">逻辑运算符</a></font></a></li>
-    <li><a href="#font-size2位运算符docsjava复习宝典基础部分基本语法运算符位运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/">位运算符</a></font></a></li>
-    <li><a href="#font-size2三元运算符docsjava复习宝典基础部分基本语法运算符三元运算符font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/">三元运算符</a></font></a></li>
-    <li><a href="#font-size2流程控制docsjava复习宝典基础部分基本语法流程控制font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">流程控制</a></font></a></li>
-    <li><a href="#font-size2分支结构docsjava复习宝典基础部分基本语法流程控制分支结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">分支结构</a></font></a></li>
-    <li><a href="#font-size2循环结构docsjava复习宝典基础部分基本语法流程控制循环结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a></font></a></li>
-    <li><a href="#font-size2关键字break和continuedocsjava复习宝典基础部分基本语法流程控制关键字break和continuefont"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/%E5%85%B3%E9%94%AE%E5%AD%97break%E5%92%8Ccontinue/">关键字break和continue</a></font></a></li>
+    <li><a href="#font-size2类与对象docsjava复习宝典基础部分面向对象-上类与对象font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">类与对象</a></font></a></li>
+    <li><a href="#font-size2类的结构之一属性docsjava复习宝典基础部分面向对象-上类的结构之一属性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">类的结构之一：属性</a></font></a></li>
+    <li><a href="#font-size2类的结构之二分法docsjava复习宝典基础部分面向对象-上类的结构之二方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">类的结构之二：分法</a></font></a></li>
   </ul>
 </nav>
 </div>
