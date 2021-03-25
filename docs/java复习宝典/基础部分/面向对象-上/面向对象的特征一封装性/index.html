@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>面向对象-上 | Javase复习宝典 | 主页</title>
+<title>面向对象的特征一：封装性 | Javase复习宝典 | 主页</title>
 <link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
 <script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
 
@@ -50,7 +50,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
-  content="  类与对象   jvm内存结构     类的结构之一：属性   类的结构之二：方法   关键字return   方法的重载   可变个数形参的方法   java的值传递机制   递归方法     类的结构之三：构造器   属性赋值顺序   javabean的概念     面向对象的特征一：封装性   ">
+  content="面向对象的特征一：封装与隐藏 为什么要引入封装性？  我们程序设计追求“高内聚，低耦合”  高内聚：类的内部数据操作细节自己完成，不允许外部干涉 低耦合 ：仅对外暴露少量的方法用于使用   隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想  问题引入 当我们创建一个类的对象以后，我们可以通过&quot;对象.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,7 +71,11 @@
       "@type": "ListItem",
       "position": 4 ,
       "name":"面向对象-上",
-      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"}]
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"},{
+      "@type": "ListItem",
+      "position": 5 ,
+      "name":"面向对象的特征一：封装性",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/"}]
 }
 </script>
 
@@ -83,9 +87,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"
+        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/"
     },
-    "headline": "面向对象-上 | Javase复习宝典 | 主页","wordCount":  13 ,
+    "headline": "面向对象的特征一：封装性 | Javase复习宝典 | 主页","datePublished": "2021-03-25T19:34:30+08:00",
+    "dateModified": "2021-03-25T19:34:30+08:00",
+    "wordCount":  62 ,
     "publisher": {
         "@type": "Person",
         "name": "ObitoSnn",
@@ -94,23 +100,21 @@
             "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "  类与对象   jvm内存结构     类的结构之一：属性   类的结构之二：方法   关键字return   方法的重载   可变个数形参的方法   java的值传递机制   递归方法     类的结构之三：构造器   属性赋值顺序   javabean的概念     面向对象的特征一：封装性   "
+    "description": "面向对象的特征一：封装与隐藏 为什么要引入封装性？  我们程序设计追求“高内聚，低耦合”  高内聚：类的内部数据操作细节自己完成，不允许外部干涉 低耦合 ：仅对外暴露少量的方法用于使用   隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想  问题引入 当我们创建一个类的对象以后，我们可以通过\u0026quot;对象."
 }
-</script><meta property="og:title" content="面向对象-上 | Javase复习宝典 | 主页" />
-<meta property="og:type" content="website" />
+</script><meta property="og:title" content="面向对象的特征一：封装性 | Javase复习宝典 | 主页" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
-<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/" />
+<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/" />
 
 
 
 
-
-<meta property="og:description" content="Eureka is a elegant and powerful theme for Hugo." />
-
+<meta property="og:description" content="面向对象的特征一：封装与隐藏 为什么要引入封装性？  我们程序设计追求“高内聚，低耦合”  高内聚：类的内部数据操作细节自己完成，不允许外部干涉 低耦合 ：仅对外暴露少量的方法用于使用   隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想  问题引入 当我们创建一个类的对象以后，我们可以通过&quot;对象." />
 
 
 
@@ -127,14 +131,17 @@
 
 
 
-<meta property="og:updated_time" content="2021-02-26T22:57:59&#43;08:00" />
+<meta property="article:published_time" content="2021-03-25T19:34:30&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-03-25T19:34:30&#43;08:00" />
 
 
 
 <meta property="article:section" content="docs" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/index.xml" title="主页" />
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -215,6 +222,11 @@
         <div class="md:w-1/4 lg:w-1/5 border-r">
             <div class="sticky top-16 pt-6">
                 
+
+
+
+
+
 
 
 
@@ -608,7 +620,7 @@
     
     <li class="py-2">
         <div class=" pb-2 ">
-            <a class=" text-eureka  hover:text-eureka"
+            <a class=" hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/">面向对象-上</a>
         </div>
         
@@ -769,7 +781,7 @@
     
     <li class="py-2">
         <div class="">
-            <a class=" hover:text-eureka"
+            <a class=" text-eureka  hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">面向对象的特征一：封装性</a>
         </div>
         
@@ -798,16 +810,18 @@
 
 
 
+
+
             </div>
 
         </div>
         <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
             <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
-                <h1 class="font-bold text-3xl text-primary-text">面向对象-上</h1>
+                <h1 class="font-bold text-3xl text-primary-text">面向对象的特征一：封装性</h1>
                 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-26</span>
+        <span>2021-03-25</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -824,51 +838,97 @@
                     
                     
                     <div class="content">
-                        <ul>
-<li>
-<h2 id="font-size2类与对象docsjava复习宝典基础部分面向对象-上类与对象font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">类与对象</a></font></h2>
+                        <h2 id="面向对象的特征一封装与隐藏">面向对象的特征一：封装与隐藏</h2>
+<h3 id="为什么要引入封装性">为什么要引入封装性？</h3>
 <ul>
-<li>
-<h2 id="font-size2jvm内存结构docsjava复习宝典基础部分面向对象-上类与对象jvm内存结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">jvm内存结构</a></font></h2>
-</li>
+<li>我们程序设计追求“高内聚，低耦合”
+<ul>
+<li>高内聚：类的内部数据操作细节自己完成，不允许外部干涉</li>
+<li>低耦合 ：仅对外暴露少量的方法用于使用</li>
 </ul>
 </li>
-<li>
-<h2 id="font-size2类的结构之一属性docsjava复习宝典基础部分面向对象-上类的结构之一属性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">类的结构之一：属性</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2类的结构之二方法docsjava复习宝典基础部分面向对象-上类的结构之二方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">类的结构之二：方法</a></font></h2>
+<li>隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，<font color=red>把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想</font></li>
+</ul>
+<h3 id="问题引入">问题引入</h3>
+<p>当我们创建一个类的对象以后，我们可以通过&quot;对象.属性&quot;的方式，对对象的属性进行赋值。这里，赋值操作要受到属性的数据类型和存储范围的制约。除此之外，没其他制约条件。但是，在实际问题中，我们往往需要给属性赋值加入额外的限制条件。这个条件就不能在属性声明时体现，我们只能通过方法进行限制条件的添加。（比如：setLegs()同时，我们需要避免用户再使用&quot;对象.属性&quot;的方式对属性进行赋值。则需要将属性声明为私有的private)，此时，针对于属性就体现了封装性</p>
+<h3 id="封装性思想具体的代码体现">封装性思想具体的代码体现</h3>
 <ul>
 <li>
-<h2 id="font-size2关键字returndocsjava复习宝典基础部分面向对象-上类的结构之二方法关键字returnfont"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97return/">关键字return</a></font></h2>
+<p>将类的属性xxx私化(private),同时，提供公共的(public)方法来获取(getXxx)和设置(setXxx)此属性的值</p>
+<pre><code class="language-java">    private double radius;
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
+    public double getRadius(){
+        return radius;
+    }
+</code></pre>
 </li>
 <li>
-<h2 id="font-size2方法的重载docsjava复习宝典基础部分面向对象-上类的结构之二方法方法的重载font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/">方法的重载</a></font></h2>
+<p>不对外暴露的私有的方法</p>
 </li>
 <li>
-<h2 id="font-size2可变个数形参的方法docsjava复习宝典基础部分面向对象-上类的结构之二方法可变个数形参的方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%8F%AF%E5%8F%98%E4%B8%AA%E6%95%B0%E5%BD%A2%E5%8F%82%E7%9A%84%E6%96%B9%E6%B3%95/">可变个数形参的方法</a></font></h2>
+<p>单例模式（将构造器私有化）</p>
 </li>
 <li>
-<h2 id="font-size2java的值传递机制docsjava复习宝典基础部分面向对象-上类的结构之二方法java的值传递机制font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/java%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/">java的值传递机制</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2递归方法docsjava复习宝典基础部分面向对象-上类的结构之二方法递归方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95/">递归方法</a></font></h2>
+<p>如果不希望类在包外被调用，可以将类设置为缺省的</p>
 </li>
 </ul>
-</li>
-<li>
-<h2 id="font-size2类的结构之三构造器docsjava复习宝典基础部分面向对象-上类的结构之三构造器font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/">类的结构之三：构造器</a></font></h2>
+<h2 id="java规定的四种权限修饰符">Java规定的四种权限修饰符</h2>
 <ul>
 <li>
-<h2 id="font-size2属性赋值顺序docsjava复习宝典基础部分面向对象-上类的结构之三构造器属性赋值顺序font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E9%A1%BA%E5%BA%8F/">属性赋值顺序</a></font></h2>
+<p>权限从小到大顺序为：private &lt;  缺省 &lt; protected &lt; public</p>
 </li>
 <li>
-<h2 id="font-size2javabean的概念docsjava复习宝典基础部分面向对象-上类的结构之三构造器javabean的概念font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/javabean%E7%9A%84%E6%A6%82%E5%BF%B5/">javabean的概念</a></font></h2>
+<p>具体的修饰范围</p>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>类内部</th>
+<th>同一个包</th>
+<th>不同包的子类</th>
+<th>同一个工程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>private</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>（缺省）</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>protected</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>public</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 </li>
+<li>
+<p>权限修饰符可用来修饰的结构说明</p>
+<ul>
+<li>4种权限都可以用来修饰类的内部结构：属性、方法、构造器、内部类
+修饰类的话，只能使用：缺省、public</li>
 </ul>
-</li>
-<li>
-<h2 id="font-size2面向对象的特征一封装性docsjava复习宝典基础部分面向对象-上面向对象的特征一封装性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">面向对象的特征一：封装性</a></font></h2>
 </li>
 </ul>
 
@@ -879,6 +939,18 @@
                     
 
                     
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/" class="block">类的结构之一：属性</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+    </div>
+</div>
+
                     
                 </div>
                 
@@ -890,19 +962,14 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6  pt-10 -mt-10 border-l ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#font-size2类与对象docsjava复习宝典基础部分面向对象-上类与对象font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">类与对象</a></font></a></li>
-    <li><a href="#font-size2jvm内存结构docsjava复习宝典基础部分面向对象-上类与对象jvm内存结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">jvm内存结构</a></font></a></li>
-    <li><a href="#font-size2类的结构之一属性docsjava复习宝典基础部分面向对象-上类的结构之一属性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">类的结构之一：属性</a></font></a></li>
-    <li><a href="#font-size2类的结构之二方法docsjava复习宝典基础部分面向对象-上类的结构之二方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">类的结构之二：方法</a></font></a></li>
-    <li><a href="#font-size2关键字returndocsjava复习宝典基础部分面向对象-上类的结构之二方法关键字returnfont"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97return/">关键字return</a></font></a></li>
-    <li><a href="#font-size2方法的重载docsjava复习宝典基础部分面向对象-上类的结构之二方法方法的重载font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/">方法的重载</a></font></a></li>
-    <li><a href="#font-size2可变个数形参的方法docsjava复习宝典基础部分面向对象-上类的结构之二方法可变个数形参的方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%8F%AF%E5%8F%98%E4%B8%AA%E6%95%B0%E5%BD%A2%E5%8F%82%E7%9A%84%E6%96%B9%E6%B3%95/">可变个数形参的方法</a></font></a></li>
-    <li><a href="#font-size2java的值传递机制docsjava复习宝典基础部分面向对象-上类的结构之二方法java的值传递机制font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/java%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/">java的值传递机制</a></font></a></li>
-    <li><a href="#font-size2递归方法docsjava复习宝典基础部分面向对象-上类的结构之二方法递归方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95/">递归方法</a></font></a></li>
-    <li><a href="#font-size2类的结构之三构造器docsjava复习宝典基础部分面向对象-上类的结构之三构造器font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/">类的结构之三：构造器</a></font></a></li>
-    <li><a href="#font-size2属性赋值顺序docsjava复习宝典基础部分面向对象-上类的结构之三构造器属性赋值顺序font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E9%A1%BA%E5%BA%8F/">属性赋值顺序</a></font></a></li>
-    <li><a href="#font-size2javabean的概念docsjava复习宝典基础部分面向对象-上类的结构之三构造器javabean的概念font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/javabean%E7%9A%84%E6%A6%82%E5%BF%B5/">javabean的概念</a></font></a></li>
-    <li><a href="#font-size2面向对象的特征一封装性docsjava复习宝典基础部分面向对象-上面向对象的特征一封装性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">面向对象的特征一：封装性</a></font></a></li>
+    <li><a href="#面向对象的特征一封装与隐藏">面向对象的特征一：封装与隐藏</a>
+      <ul>
+        <li><a href="#为什么要引入封装性">为什么要引入封装性？</a></li>
+        <li><a href="#问题引入">问题引入</a></li>
+        <li><a href="#封装性思想具体的代码体现">封装性思想具体的代码体现</a></li>
+      </ul>
+    </li>
+    <li><a href="#java规定的四种权限修饰符">Java规定的四种权限修饰符</a></li>
   </ul>
 </nav>
 </div>

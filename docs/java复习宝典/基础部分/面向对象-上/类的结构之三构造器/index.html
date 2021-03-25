@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>面向对象-上 | Javase复习宝典 | 主页</title>
+<title>类的结构之三：构造器 | Javase复习宝典 | 主页</title>
 <link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
 <script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
 
@@ -50,7 +50,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
-  content="  类与对象   jvm内存结构     类的结构之一：属性   类的结构之二：方法   关键字return   方法的重载   可变个数形参的方法   java的值传递机制   递归方法     类的结构之三：构造器   属性赋值顺序   javabean的概念     面向对象的特征一：封装性   ">
+  content="属性赋值顺序 javabean的概念 ">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,7 +71,11 @@
       "@type": "ListItem",
       "position": 4 ,
       "name":"面向对象-上",
-      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"}]
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"},{
+      "@type": "ListItem",
+      "position": 5 ,
+      "name":"类的结构之三：构造器",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/"}]
 }
 </script>
 
@@ -83,9 +87,9 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"
+        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/"
     },
-    "headline": "面向对象-上 | Javase复习宝典 | 主页","wordCount":  13 ,
+    "headline": "类的结构之三：构造器 | Javase复习宝典 | 主页","wordCount":  2 ,
     "publisher": {
         "@type": "Person",
         "name": "ObitoSnn",
@@ -94,16 +98,16 @@
             "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "  类与对象   jvm内存结构     类的结构之一：属性   类的结构之二：方法   关键字return   方法的重载   可变个数形参的方法   java的值传递机制   递归方法     类的结构之三：构造器   属性赋值顺序   javabean的概念     面向对象的特征一：封装性   "
+    "description": "属性赋值顺序 javabean的概念 "
 }
-</script><meta property="og:title" content="面向对象-上 | Javase复习宝典 | 主页" />
+</script><meta property="og:title" content="类的结构之三：构造器 | Javase复习宝典 | 主页" />
 <meta property="og:type" content="website" />
 
 
 <meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
-<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/" />
+<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/" />
 
 
 
@@ -127,14 +131,14 @@
 
 
 
-<meta property="og:updated_time" content="2021-02-26T22:57:59&#43;08:00" />
+<meta property="og:updated_time" content="2021-03-25T20:11:57&#43;08:00" />
 
 
 
 <meta property="article:section" content="docs" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/index.xml" title="主页" />
+<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/index.xml" title="主页" />
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -215,6 +219,11 @@
         <div class="md:w-1/4 lg:w-1/5 border-r">
             <div class="sticky top-16 pt-6">
                 
+
+
+
+
+
 
 
 
@@ -608,7 +617,7 @@
     
     <li class="py-2">
         <div class=" pb-2 ">
-            <a class=" text-eureka  hover:text-eureka"
+            <a class=" hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/">面向对象-上</a>
         </div>
         
@@ -730,7 +739,7 @@
     
     <li class="py-2">
         <div class=" pb-2 ">
-            <a class=" hover:text-eureka"
+            <a class=" text-eureka  hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/">类的结构之三：构造器</a>
         </div>
         
@@ -798,16 +807,18 @@
 
 
 
+
+
             </div>
 
         </div>
         <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
             <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
-                <h1 class="font-bold text-3xl text-primary-text">面向对象-上</h1>
+                <h1 class="font-bold text-3xl text-primary-text">类的结构之三：构造器</h1>
                 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-26</span>
+        <span>2021-03-25</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -824,53 +835,8 @@
                     
                     
                     <div class="content">
-                        <ul>
-<li>
-<h2 id="font-size2类与对象docsjava复习宝典基础部分面向对象-上类与对象font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">类与对象</a></font></h2>
-<ul>
-<li>
-<h2 id="font-size2jvm内存结构docsjava复习宝典基础部分面向对象-上类与对象jvm内存结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">jvm内存结构</a></font></h2>
-</li>
-</ul>
-</li>
-<li>
-<h2 id="font-size2类的结构之一属性docsjava复习宝典基础部分面向对象-上类的结构之一属性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">类的结构之一：属性</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2类的结构之二方法docsjava复习宝典基础部分面向对象-上类的结构之二方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">类的结构之二：方法</a></font></h2>
-<ul>
-<li>
-<h2 id="font-size2关键字returndocsjava复习宝典基础部分面向对象-上类的结构之二方法关键字returnfont"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97return/">关键字return</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2方法的重载docsjava复习宝典基础部分面向对象-上类的结构之二方法方法的重载font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/">方法的重载</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2可变个数形参的方法docsjava复习宝典基础部分面向对象-上类的结构之二方法可变个数形参的方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%8F%AF%E5%8F%98%E4%B8%AA%E6%95%B0%E5%BD%A2%E5%8F%82%E7%9A%84%E6%96%B9%E6%B3%95/">可变个数形参的方法</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2java的值传递机制docsjava复习宝典基础部分面向对象-上类的结构之二方法java的值传递机制font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/java%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/">java的值传递机制</a></font></h2>
-</li>
-<li>
-<h2 id="font-size2递归方法docsjava复习宝典基础部分面向对象-上类的结构之二方法递归方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95/">递归方法</a></font></h2>
-</li>
-</ul>
-</li>
-<li>
-<h2 id="font-size2类的结构之三构造器docsjava复习宝典基础部分面向对象-上类的结构之三构造器font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/">类的结构之三：构造器</a></font></h2>
-<ul>
-<li>
-<h2 id="font-size2属性赋值顺序docsjava复习宝典基础部分面向对象-上类的结构之三构造器属性赋值顺序font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E9%A1%BA%E5%BA%8F/">属性赋值顺序</a></font></h2>
-</li>
-<li>
+                        <h2 id="font-size2属性赋值顺序docsjava复习宝典基础部分面向对象-上类的结构之三构造器属性赋值顺序font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E9%A1%BA%E5%BA%8F/">属性赋值顺序</a></font></h2>
 <h2 id="font-size2javabean的概念docsjava复习宝典基础部分面向对象-上类的结构之三构造器javabean的概念font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/javabean%E7%9A%84%E6%A6%82%E5%BF%B5/">javabean的概念</a></font></h2>
-</li>
-</ul>
-</li>
-<li>
-<h2 id="font-size2面向对象的特征一封装性docsjava复习宝典基础部分面向对象-上面向对象的特征一封装性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">面向对象的特征一：封装性</a></font></h2>
-</li>
-</ul>
 
                     </div>
                     
@@ -890,19 +856,8 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6  pt-10 -mt-10 border-l ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#font-size2类与对象docsjava复习宝典基础部分面向对象-上类与对象font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">类与对象</a></font></a></li>
-    <li><a href="#font-size2jvm内存结构docsjava复习宝典基础部分面向对象-上类与对象jvm内存结构font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">jvm内存结构</a></font></a></li>
-    <li><a href="#font-size2类的结构之一属性docsjava复习宝典基础部分面向对象-上类的结构之一属性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/">类的结构之一：属性</a></font></a></li>
-    <li><a href="#font-size2类的结构之二方法docsjava复习宝典基础部分面向对象-上类的结构之二方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/">类的结构之二：方法</a></font></a></li>
-    <li><a href="#font-size2关键字returndocsjava复习宝典基础部分面向对象-上类的结构之二方法关键字returnfont"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%85%B3%E9%94%AE%E5%AD%97return/">关键字return</a></font></a></li>
-    <li><a href="#font-size2方法的重载docsjava复习宝典基础部分面向对象-上类的结构之二方法方法的重载font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E8%BD%BD/">方法的重载</a></font></a></li>
-    <li><a href="#font-size2可变个数形参的方法docsjava复习宝典基础部分面向对象-上类的结构之二方法可变个数形参的方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E5%8F%AF%E5%8F%98%E4%B8%AA%E6%95%B0%E5%BD%A2%E5%8F%82%E7%9A%84%E6%96%B9%E6%B3%95/">可变个数形参的方法</a></font></a></li>
-    <li><a href="#font-size2java的值传递机制docsjava复习宝典基础部分面向对象-上类的结构之二方法java的值传递机制font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/java%E7%9A%84%E5%80%BC%E4%BC%A0%E9%80%92%E6%9C%BA%E5%88%B6/">java的值传递机制</a></font></a></li>
-    <li><a href="#font-size2递归方法docsjava复习宝典基础部分面向对象-上类的结构之二方法递归方法font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E6%96%B9%E6%B3%95/%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95/">递归方法</a></font></a></li>
-    <li><a href="#font-size2类的结构之三构造器docsjava复习宝典基础部分面向对象-上类的结构之三构造器font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/">类的结构之三：构造器</a></font></a></li>
     <li><a href="#font-size2属性赋值顺序docsjava复习宝典基础部分面向对象-上类的结构之三构造器属性赋值顺序font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/%E5%B1%9E%E6%80%A7%E8%B5%8B%E5%80%BC%E9%A1%BA%E5%BA%8F/">属性赋值顺序</a></font></a></li>
     <li><a href="#font-size2javabean的概念docsjava复习宝典基础部分面向对象-上类的结构之三构造器javabean的概念font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%89%E6%9E%84%E9%80%A0%E5%99%A8/javabean%E7%9A%84%E6%A6%82%E5%BF%B5/">javabean的概念</a></font></a></li>
-    <li><a href="#font-size2面向对象的特征一封装性docsjava复习宝典基础部分面向对象-上面向对象的特征一封装性font"><font size=2><a href="/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">面向对象的特征一：封装性</a></font></a></li>
   </ul>
 </nav>
 </div>
