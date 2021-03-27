@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>面向对象的特征一：封装性 | Javase复习宝典 | 主页</title>
+<title>Object类的使用 | Javase复习宝典 | 主页</title>
 <link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
 <script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
 
@@ -50,7 +50,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
 
 <meta name="description"
-  content="面向对象的特征一：封装与隐藏 为什么要引入封装性？  我们程序设计追求“高内聚，低耦合”  高内聚：类的内部数据操作细节自己完成，不允许外部干涉 低耦合 ：仅对外暴露少量的方法用于使用   隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想  问题引入 当我们创建一个类的对象以后，我们可以通过&quot;对象.">
+  content="java.lang.Object类的说明  Object类是所Java类的根父类 如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,12 +70,12 @@
       "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/"},{
       "@type": "ListItem",
       "position": 4 ,
-      "name":"面向对象-上",
-      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/"},{
+      "name":"面向对象-中",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/"},{
       "@type": "ListItem",
       "position": 5 ,
-      "name":"面向对象的特征一：封装性",
-      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/"}]
+      "name":"Object类的使用",
+      "item":"https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/object%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/"}]
 }
 </script>
 
@@ -87,11 +87,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/"
+        "@id": "https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/object%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/"
     },
-    "headline": "面向对象的特征一：封装性 | Javase复习宝典 | 主页","datePublished": "2021-03-25T19:34:30+08:00",
-    "dateModified": "2021-03-25T19:34:30+08:00",
-    "wordCount":  62 ,
+    "headline": "Object类的使用 | Javase复习宝典 | 主页","datePublished": "2021-03-27T17:51:19+08:00",
+    "dateModified": "2021-03-27T17:51:19+08:00",
+    "wordCount":  124 ,
     "publisher": {
         "@type": "Person",
         "name": "ObitoSnn",
@@ -100,21 +100,21 @@
             "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
         }
         },
-    "description": "面向对象的特征一：封装与隐藏 为什么要引入封装性？  我们程序设计追求“高内聚，低耦合”  高内聚：类的内部数据操作细节自己完成，不允许外部干涉 低耦合 ：仅对外暴露少量的方法用于使用   隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想  问题引入 当我们创建一个类的对象以后，我们可以通过\u0026quot;对象."
+    "description": "java.lang.Object类的说明  Object类是所Java类的根父类 如果在类的声明中未使用extends关键字指明其父类，则默认父类为java."
 }
-</script><meta property="og:title" content="面向对象的特征一：封装性 | Javase复习宝典 | 主页" />
+</script><meta property="og:title" content="Object类的使用 | Javase复习宝典 | 主页" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
-<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/" />
+<meta property="og:url" content="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/object%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/" />
 
 
 
 
-<meta property="og:description" content="面向对象的特征一：封装与隐藏 为什么要引入封装性？  我们程序设计追求“高内聚，低耦合”  高内聚：类的内部数据操作细节自己完成，不允许外部干涉 低耦合 ：仅对外暴露少量的方法用于使用   隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想  问题引入 当我们创建一个类的对象以后，我们可以通过&quot;对象." />
+<meta property="og:description" content="java.lang.Object类的说明  Object类是所Java类的根父类 如果在类的声明中未使用extends关键字指明其父类，则默认父类为java." />
 
 
 
@@ -131,10 +131,10 @@
 
 
 
-<meta property="article:published_time" content="2021-03-25T19:34:30&#43;08:00" />
+<meta property="article:published_time" content="2021-03-27T17:51:19&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-03-25T19:34:30&#43;08:00" />
+<meta property="article:modified_time" content="2021-03-27T17:51:19&#43;08:00" />
 
 
 
@@ -781,7 +781,7 @@
     
     <li class="py-2">
         <div class="">
-            <a class=" text-eureka  hover:text-eureka"
+            <a class=" hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%80%E5%B0%81%E8%A3%85%E6%80%A7/">面向对象的特征一：封装性</a>
         </div>
         
@@ -886,7 +886,7 @@
     
     <li class="py-2">
         <div class="">
-            <a class=" hover:text-eureka"
+            <a class=" text-eureka  hover:text-eureka"
                 href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/object%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/">Object类的使用</a>
         </div>
         
@@ -922,11 +922,11 @@
         </div>
         <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
             <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
-                <h1 class="font-bold text-3xl text-primary-text">面向对象的特征一：封装性</h1>
+                <h1 class="font-bold text-3xl text-primary-text">Object类的使用</h1>
                 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-03-25</span>
+        <span>2021-03-27</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -943,99 +943,74 @@
                     
                     
                     <div class="content">
-                        <h2 id="面向对象的特征一封装与隐藏">面向对象的特征一：封装与隐藏</h2>
-<h3 id="为什么要引入封装性">为什么要引入封装性？</h3>
+                        <h2 id="javalangobject类的说明">java.lang.Object类的说明</h2>
 <ul>
-<li>我们程序设计追求“高内聚，低耦合”
-<ul>
-<li>高内聚：类的内部数据操作细节自己完成，不允许外部干涉</li>
-<li>低耦合 ：仅对外暴露少量的方法用于使用</li>
+<li>Object类是所Java类的根父类</li>
+<li>如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.lang.Object类</li>
+<li>Object类中的功能(属性、方法)就具通用性。<br/>例如：<br/>方法：equals() / toString() / getClass() / hashCode() / clone() / finalize() / wait() / notify() / notifyAll()</li>
+<li>Object类只声明了一个空参的构造器</li>
 </ul>
-</li>
-<li>隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，<font color=red>把该隐藏的隐藏起来，该暴露的暴露出来。这就是封装性的设计思想</font></li>
-</ul>
-<h3 id="问题引入">问题引入</h3>
-<p>当我们创建一个类的对象以后，我们可以通过&quot;对象.属性&quot;的方式，对对象的属性进行赋值。这里，赋值操作要受到属性的数据类型和存储范围的制约。除此之外，没其他制约条件。但是，在实际问题中，我们往往需要给属性赋值加入额外的限制条件。这个条件就不能在属性声明时体现，我们只能通过方法进行限制条件的添加。（比如：setLegs()同时，我们需要避免用户再使用&quot;对象.属性&quot;的方式对属性进行赋值。则需要将属性声明为私有的private)，此时，针对于属性就体现了封装性</p>
-<h3 id="封装性思想具体的代码体现">封装性思想具体的代码体现</h3>
+<h2 id="equals方法">equals()方法</h2>
+<h3 id="euqals的使用">euqals()的使用</h3>
 <ul>
-<li>
-<p>将类的属性xxx私化(private),同时，提供公共的(public)方法来获取(getXxx)和设置(setXxx)此属性的值</p>
-<pre><code class="language-java">    private double radius;
-    public void setRadius(double radius){
-        this.radius = radius;
+<li>是一个方法，而非运算符</li>
+<li>只能适用于引用数据类型</li>
+<li>Object类中equals()的定义：
+<pre><code class="language-java">    public boolean equals(Object obj) {
+        return (this == obj);
     }
-    public double getRadius(){
-        return radius;
+</code></pre>
+<p>说明：Object类中定义的equals()和==的作用是相同的：比较两个对象的地址值是否相同.即两个引用是否指向同一个对象实体</p>
+</li>
+</ul>
+<h3 id="如何重写equals">如何重写equals()</h3>
+<h4 id="手动重写">手动重写</h4>
+<pre><code class="language-java">    class User{
+        String name;
+        int age;
+        //重写其equals()方法
+        public boolean equals(Object obj){
+            if(obj == this){
+                return true;
+            }
+            if(obj instanceof User){
+                User u = (User) obj;
+                return this.age == u.age &amp;&amp; this.name.equals(u.name);
+            }
+            return false;
+        }
+    }
+</code></pre>
+<h4 id="开发中如何实现">开发中如何实现</h4>
+<p>可自动生成</p>
+<h3 id="回顾--运算符的使用">回顾 == 运算符的使用</h3>
+<ul>
+<li>可以使用在基本数据类型变量和引用数据类型变量中</li>
+<li>如果比较的是基本数据类型变量：比较两个变量保存的数据是否相等（不一定类型要相同）</li>
+<li>如果比较的是引用数据类型变量：比较两个对象的地址值是否相同，即两个引用是否指向同一个对象实体</li>
+</ul>
+<p>补充：如使用 == 符号比较引用数据类型时，必须保证符号左右两边的变量类型一致</p>
+<h2 id="tostring方法">toString()方法</h2>
+<h3 id="tostring的使用">toString()的使用</h3>
+<ul>
+<li>当我们输出一个对象的引用时，实际上就是调用当前对象的toString()</li>
+<li>Object类中toString()的定义：
+<pre><code class="language-java">    public String toString() {
+        return getClass().getName() + &quot;@&quot; + Integer.toHexString(hashCode());
     }
 </code></pre>
 </li>
-<li>
-<p>不对外暴露的私有的方法</p>
-</li>
-<li>
-<p>单例模式（将构造器私有化）</p>
-</li>
-<li>
-<p>如果不希望类在包外被调用，可以将类设置为缺省的</p>
-</li>
+<li>像String、Date、File、包装类等都重写了Object类中的toString()方法，使得在调用对象的toString()时，返回&quot;实体内容&quot;信息</li>
+<li>自定义类也可以重写toString()方法，当调用此方法时，返回对象的&quot;实体内容&quot;</li>
 </ul>
-<h2 id="java规定的四种权限修饰符">Java规定的四种权限修饰符</h2>
-<ul>
-<li>
-<p>权限从小到大顺序为：private &lt;  缺省 &lt; protected &lt; public</p>
-</li>
-<li>
-<p>具体的修饰范围</p>
-<table>
-<thead>
-<tr>
-<th>修饰符</th>
-<th>类内部</th>
-<th>同一个包</th>
-<th>不同包的子类</th>
-<th>同一个工程</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>private</td>
-<td>Yes</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>（缺省）</td>
-<td>Yes</td>
-<td>Yes</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>protected</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td></td>
-</tr>
-<tr>
-<td>public</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>权限修饰符可用来修饰的结构说明</p>
-<ul>
-<li>4种权限都可以用来修饰类的内部结构：属性、方法、构造器、内部类
-修饰类的话，只能使用：缺省、public</li>
-</ul>
-</li>
-</ul>
+<h3 id="如何重写tostring">如何重写toString()</h3>
+<p>举例：</p>
+<pre><code class="language-java">    //自动实现
+    @Override
+    public String toString() {
+        return &quot;Customer [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;
+    }
+</code></pre>
 
                     </div>
                     
@@ -1048,13 +1023,10 @@
     <div>
         
         <span class="block font-bold">上一页</span>
-        <a href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E4%B9%8B%E4%B8%80%E5%B1%9E%E6%80%A7/" class="block">类的结构之一：属性</a>
+        <a href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/" class="block">面向对象的特征三：多态性</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
-        
-        <span class="block font-bold">下一页</span>
-        <a href="https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E5%85%B3%E9%94%AE%E5%AD%97this/" class="block">关键字：this</a>
         
     </div>
 </div>
@@ -1070,14 +1042,25 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6  pt-10 -mt-10 border-l ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#面向对象的特征一封装与隐藏">面向对象的特征一：封装与隐藏</a>
+    <li><a href="#javalangobject类的说明">java.lang.Object类的说明</a></li>
+    <li><a href="#equals方法">equals()方法</a>
       <ul>
-        <li><a href="#为什么要引入封装性">为什么要引入封装性？</a></li>
-        <li><a href="#问题引入">问题引入</a></li>
-        <li><a href="#封装性思想具体的代码体现">封装性思想具体的代码体现</a></li>
+        <li><a href="#euqals的使用">euqals()的使用</a></li>
+        <li><a href="#如何重写equals">如何重写equals()</a>
+          <ul>
+            <li><a href="#手动重写">手动重写</a></li>
+            <li><a href="#开发中如何实现">开发中如何实现</a></li>
+          </ul>
+        </li>
+        <li><a href="#回顾--运算符的使用">回顾 == 运算符的使用</a></li>
       </ul>
     </li>
-    <li><a href="#java规定的四种权限修饰符">Java规定的四种权限修饰符</a></li>
+    <li><a href="#tostring方法">toString()方法</a>
+      <ul>
+        <li><a href="#tostring的使用">toString()的使用</a></li>
+        <li><a href="#如何重写tostring">如何重写toString()</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
