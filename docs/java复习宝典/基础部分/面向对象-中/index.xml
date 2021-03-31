@@ -65,5 +65,15 @@
       <description>java.lang.Object类的说明  Object类是所Java类的根父类 如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.</description>
     </item>
     
+    <item>
+      <title>包装类的使用</title>
+      <link>https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%8C%85%E8%A3%85%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 28 Mar 2021 12:44:22 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%8C%85%E8%A3%85%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>为什么要有包装类(或封装类） 为了使基本数据类型的变量具有类的特征，引入包装类
+基本数据类型与对应的包装类    基本数据类型 包装类     byte Byte   short Short   int Integer   long Long   float Float   double Double   boolean Boolean   char Character    需要掌握的类型间的转换：（基本数据类型、包装类、String） 基本数据类型&amp;lt;&amp;mdash;&amp;gt;包装类：JDK 5.</description>
+    </item>
+    
   </channel>
 </rss>
