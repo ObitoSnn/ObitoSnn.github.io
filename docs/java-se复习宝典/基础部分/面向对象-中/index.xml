@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面向对象-中 on 主页</title>
+    <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/</link>
+    <description>Recent content in 面向对象-中 on 主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Sat, 27 Mar 2021 15:22:06 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面向对象的特征二：继承性</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%BA%8C%E7%BB%A7%E6%89%BF%E6%80%A7/</link>
+      <pubDate>Sat, 27 Mar 2021 15:25:09 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%BA%8C%E7%BB%A7%E6%89%BF%E6%80%A7/</guid>
+      <description>为什么要有类的继承性？(继承性的好处）  减少了代码的冗余，提高了代码的复用性 便于功能的扩展 为之后多态性的使用，提供了前提  图示：</description>
+    </item>
+    
+    <item>
+      <title>方法的重写</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E5%86%99/</link>
+      <pubDate>Sat, 27 Mar 2021 15:42:27 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E6%96%B9%E6%B3%95%E7%9A%84%E9%87%8D%E5%86%99/</guid>
+      <description>什么是方法的重写(override)？ 子类继承父类以后，可以对父类中同名同参数的方法，进行覆盖操作
+应用 重写以后，当创建子类对象以后，通过子类对象调用子父类中的同名同参数的方法时，实际执行的是子类重写父类的方法</description>
+    </item>
+    
+    <item>
+      <title>关键字：super</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%85%B3%E9%94%AE%E5%AD%97super/</link>
+      <pubDate>Sat, 27 Mar 2021 16:19:12 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%85%B3%E9%94%AE%E5%AD%97super/</guid>
+      <description>super关键字的理解 super 关键字可以理解为：父类的</description>
+    </item>
+    
+    <item>
+      <title>子类对象实例化全过程</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%85%A8%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Sat, 27 Mar 2021 16:53:14 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%AD%90%E7%B1%BB%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%85%A8%E8%BF%87%E7%A8%8B/</guid>
+      <description>从结果上看：继承性  子类继承父类以后，就获取了父类中声明的属性或方法 创建子类的对象，在堆空间中，就会加载所父类中声明的属性  从过程上看 当我们通过子类的构造器创建子类对象时，我们一定会直接或间接的调用其父类的构造器，进而调用父类的父类的构造器，&amp;hellip;直到调用了java.</description>
+    </item>
+    
+    <item>
+      <title>面向对象的特征三：多态性</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/</link>
+      <pubDate>Sat, 27 Mar 2021 16:59:18 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E4%B8%89%E5%A4%9A%E6%80%81%E6%80%A7/</guid>
+      <description>多态性的理解 可以理解为一个事物的多种形态
+何为多态性 对象的多态性：父类的引用指向子类的对象（或子类的对象赋给父类的引用）</description>
+    </item>
+    
+    <item>
+      <title>Object类的使用</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/object%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 27 Mar 2021 17:51:19 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/object%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>java.lang.Object类的说明  Object类是所Java类的根父类 如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.</description>
+    </item>
+    
+    <item>
+      <title>包装类的使用</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%8C%85%E8%A3%85%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 28 Mar 2021 12:44:22 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%AD/%E5%8C%85%E8%A3%85%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>为什么要有包装类(或封装类） 为了使基本数据类型的变量具有类的特征，引入包装类
+基本数据类型与对应的包装类    基本数据类型 包装类     byte Byte   short Short   int Integer   long Long   float Float   double Double   boolean Boolean   char Character    需要掌握的类型间的转换：（基本数据类型、包装类、String） 基本数据类型&amp;lt;&amp;mdash;&amp;gt;包装类：JDK 5.</description>
+    </item>
+    
+  </channel>
+</rss>

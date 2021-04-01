@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面向对象-下 on 主页</title>
+    <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8B/</link>
+    <description>Recent content in 面向对象-下 on 主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Sun, 28 Mar 2021 13:06:11 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关键字：final</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8B/%E5%85%B3%E9%94%AE%E5%AD%97final/</link>
+      <pubDate>Sun, 28 Mar 2021 15:15:16 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8B/%E5%85%B3%E9%94%AE%E5%AD%97final/</guid>
+      <description>final：最终的 可以用来修饰：类、方法、变量
+final 用来修饰一个类：此类不能被其他类所继承 比如：String类、System类、StringBuffer</description>
+    </item>
+    
+    <item>
+      <title>类的结构：内部类</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8B/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E5%86%85%E9%83%A8%E7%B1%BB/</link>
+      <pubDate>Tue, 30 Mar 2021 21:14:05 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8B/%E7%B1%BB%E7%9A%84%E7%BB%93%E6%9E%84%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
+      <description>内部类 类的第五个成员
+定义 Java中允许将一个类A声明在另一个类B中，则类A就是内部类，类B称为外部类</description>
+    </item>
+    
+  </channel>
+</rss>

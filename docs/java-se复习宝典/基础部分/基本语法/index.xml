@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>基本语法 on 主页</title>
+    <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+    <description>Recent content in 基本语法 on 主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 26 Feb 2021 13:26:00 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>变量的使用（重点）</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8%E9%87%8D%E7%82%B9/</link>
+      <pubDate>Fri, 26 Feb 2021 13:57:31 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8%E9%87%8D%E7%82%B9/</guid>
+      <description>变量的分类 按数据类型分类 详细说明：</description>
+    </item>
+    
+    <item>
+      <title>进制（了解）</title>
+      <link>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%9B%E5%88%B6%E4%BA%86%E8%A7%A3/</link>
+      <pubDate>Fri, 26 Feb 2021 14:33:45 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java-se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%9B%E5%88%B6%E4%BA%86%E8%A7%A3/</guid>
+      <description>编程中涉及的进制及表示方式 二进制的使用说明  计算机底层的存储方式：所有数字在计算机底层都以二进制形式存在。 二进制数据的存储方式：所有的数值，不管正负，底层都以补码的方式存储。 原码、反码、补码的说明：  正数：三码合一 负数：  原码：直接将一个数值转换成二进制数，最高位是符号位 负数的反码：是对原码按位取反，只是最高位（符号位）确定为1 负数的补码：其反码加1      进制间的转换  图示： 图示二进制转换为十进制： 图示十进制转换为二进制： 二进制与八进制、十六进制间的转换：  </description>
+    </item>
+    
+  </channel>
+</rss>
