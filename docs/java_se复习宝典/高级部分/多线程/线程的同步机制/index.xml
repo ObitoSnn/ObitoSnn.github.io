@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线程的同步机制 on 主页</title>
+    <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/</link>
+    <description>Recent content in 线程的同步机制 on 主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 02 Apr 2021 11:10:51 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>死锁问题</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/%E6%AD%BB%E9%94%81%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 02 Apr 2021 11:32:02 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/%E6%AD%BB%E9%94%81%E9%97%AE%E9%A2%98/</guid>
+      <description>死锁的理解 不同的线程分别占用对方需要的同步资源不放弃，都在等待对方放弃自己需要的同步资源，就形成了线程的死锁
+说明  出现死锁后，不会出现异常，不会出现提示，只是所有的线程都处于阻塞状态，无法继续 我们使用同步时，要避免出现死锁  举例 public static void main(String[] args) { StringBuffer s1 = new StringBuffer(); StringBuffer s2 = new StringBuffer(); new Thread(){ @Override public void run() { synchronized (s1) { s1.</description>
+    </item>
+    
+  </channel>
+</rss>

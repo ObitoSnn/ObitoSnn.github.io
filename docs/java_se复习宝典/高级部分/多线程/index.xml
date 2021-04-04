@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>多线程 on 主页</title>
+    <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+    <description>Recent content in 多线程 on 主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Thu, 01 Apr 2021 20:24:04 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>程序、进程、线程的理解</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%A8%8B%E5%BA%8F%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Thu, 01 Apr 2021 20:24:56 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%A8%8B%E5%BA%8F%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+      <description>程序(program) 概念：是为完成特定任务、用某种语言编写的一组指令的集合。即指一段静态的代码
+进程(process) 概念：程序的一次执行过程，或是正在运行的一个程序。</description>
+    </item>
+    
+    <item>
+      <title>并行与并发</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%B9%B6%E5%8F%91/</link>
+      <pubDate>Thu, 01 Apr 2021 20:38:22 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%B9%B6%E5%8F%91/</guid>
+      <description>单核CPU与多核CPU的理解  单核CPU，其实是一种假的多线程，因为在一个时间单元内，也只能执行一个线程的任务。例如：虽然有多车道，但是收费站只有一个工作人员在收费，只有收了费才能通过，那么CPU就好比收费人员。如果某个人不想交钱，那么收费人员可以把他“挂起”（晾着他，等他想通了，准备好了钱，再去收费）但是因为CPU时间单元特别短，因此感觉不出来 如果是多核的话，才能更好的发挥多线程的效率（现在的服务器都是多核的） 一个Java应用程序java.</description>
+    </item>
+    
+    <item>
+      <title>创建多线程的两种方式</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%88%9B%E5%BB%BA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Thu, 01 Apr 2021 22:02:30 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%88%9B%E5%BB%BA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <description>方式一：继承Thread类的方式  创建一个继承于Thread类的子类 重写Thread类的run() &amp;mdash;&amp;gt; 将此线程执行的操作声明在run()中 创建Thread类的子类的对象 通过此对象调用start()：①启动当前线程 ②调用当前线程的run()  说明两个问题：</description>
+    </item>
+    
+    <item>
+      <title>Thread类中的常用方法</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 02 Apr 2021 00:47:24 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>Thread类中的常用的方法  start()：启动当前线程，调用当前线程的run() run()：通常需要重写Thread类中的此方法，创建的线程要执行的操作声明在此方法中 currentThread()：静态方法，返回执行当前代码的线程 getName()：获取当前线程的名字 setName()：设置当前线程的名字 yield()：释放当前cpu的执行权 join()：在线程a中调用线程b的join()，此时线程a就进入阻塞状态，直到线程b完全执行完以后，线程a才结束阻塞状态 stop()：已过时，当执行此方法时，强制结束当前线程 sleep(long millitime)：让当前线程“睡眠”指定的millitime毫秒。在指定的millitime毫秒时间内，当前线程是阻塞状态 isAlive()：判断当前线程是否存活  线程的优先级  MAX_PRIORITY：10 MIN _PRIORITY：1 NORM_PRIORITY：5 &amp;ndash;&amp;gt; 默认优先级  如何获取和设置当前线程的优先级  getPriority()：获取线程的优先级 setPriority(int p)：设置线程的优先级  说明：高优先级的线程要抢占低优先级线程cpu的执行权。但是只是从概率上讲，高优先级的线程高概率的情况下被执行。并不意味着只当高优先级的线程执行完以后，低优先级的线程才执行</description>
+    </item>
+    
+    <item>
+      <title>Thread的生命周期</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</link>
+      <pubDate>Fri, 02 Apr 2021 10:38:44 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</guid>
+      <description>图示 说明  生命周期关注两个概念：状态、相应的方法 关注状态a &amp;mdash;&amp;gt; 状态b，哪些方法执行了（回调方法），某个方法主动调用：状态a &amp;mdash;&amp;gt; 状态b 阻塞：临时状态，不可以作为最终状态 死亡：最终状态  </description>
+    </item>
+    
+    <item>
+      <title>线程通信</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1/</link>
+      <pubDate>Fri, 02 Apr 2021 11:43:31 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1/</guid>
+      <description>线程通信涉及到的三个方法  wait()：一旦执行此方法，当前线程就进入阻塞状态，并释放同步监视器 notify()：一旦执行此方法，就会唤醒被wait的一个线程。如果有多个线程被wait，就唤醒优先级高的那个 notifyAll()：一旦执行此方法，就会唤醒所有被wait的线程  说明  wait()，notify()，notifyAll()三个方法必须使用在同步代码块或同步方法中 wait()，notify()，notifyAll()三个方法的调用者必须是同步代码块或同步方法中的同步监视器，否则会出现IllegalMonitorStateException异常 wait()，notify()，notifyAll()三个方法是定义在java.</description>
+    </item>
+    
+    <item>
+      <title>JDK5.0新增线程创建的方式</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/jdk5.0%E6%96%B0%E5%A2%9E%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E7%9A%84%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sun, 04 Apr 2021 18:10:26 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/jdk5.0%E6%96%B0%E5%A2%9E%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E7%9A%84%E6%96%B9%E5%BC%8F/</guid>
+      <description>新增方式一：实现Callable接口 //1.创建一个实现Callable的实现类 class NumThread implements Callable{ //2.</description>
+    </item>
+    
+  </channel>
+</rss>
