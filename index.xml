@@ -8,7 +8,16 @@
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Sun, 04 Apr 2021 18:10:26 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Apr 2021 23:01:03 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>String类</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/string%E7%B1%BB/</link>
+      <pubDate>Mon, 05 Apr 2021 00:27:31 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/string%E7%B1%BB/</guid>
+      <description>概述   String:字符串，使用一对&amp;quot;&amp;ldquo;引起来表示</description>
+    </item>
+    
     <item>
       <title>死锁问题</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/%E6%AD%BB%E9%94%81%E9%97%AE%E9%A2%98/</link>
@@ -161,6 +170,16 @@
     </item>
     
     <item>
+      <title>StringBuffer、StringBuilder</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/stringbufferstringbuilder/</link>
+      <pubDate>Mon, 05 Apr 2021 14:58:37 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/stringbufferstringbuilder/</guid>
+      <description>String、StringBuffer、StringBuilder三者的对比 String：不可变的字符序列，底层使用char[]存储
+StringBuffer：可变的字符序列；线程安全的，效率低；底层使用char[]存储</description>
+    </item>
+    
+    <item>
       <title>并行与并发</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%B9%B6%E5%8F%91/</link>
       <pubDate>Thu, 01 Apr 2021 20:38:22 +0800</pubDate>
@@ -274,6 +293,16 @@ int num;//声明num = 10;//初始化int id = 1001;//声明 + 初始化int[] i
     </item>
     
     <item>
+      <title>JDK 8之前日期时间API</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/jdk8%E4%B9%8B%E5%89%8D%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4api/</link>
+      <pubDate>Mon, 05 Apr 2021 23:30:30 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/jdk8%E4%B9%8B%E5%89%8D%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4api/</guid>
+      <description>获取系统当前时间 System类中的currentTimeMillis()
+long time = System.</description>
+    </item>
+    
+    <item>
       <title>创建多线程的两种方式</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%88%9B%E5%BB%BA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Thu, 01 Apr 2021 22:02:30 +0800</pubDate>
@@ -366,6 +395,15 @@ final 用来修饰一个类：此类不能被其他类所继承 比如：String�
     </item>
     
     <item>
+      <title>JDK 8中新日期时间API</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/jdk8%E4%B8%AD%E6%96%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4api/</link>
+      <pubDate>Tue, 06 Apr 2021 12:16:35 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/jdk8%E4%B8%AD%E6%96%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4api/</guid>
+      <description>日期时间API的迭代 第一代：JDK 1.0 Date类</description>
+    </item>
+    
+    <item>
       <title>Thread类中的常用方法</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread%E7%B1%BB%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 02 Apr 2021 00:47:24 +0800</pubDate>
@@ -430,6 +468,15 @@ final 用来修饰一个类：此类不能被其他类所继承 比如：String�
     </item>
     
     <item>
+      <title>Java比较器</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/java%E6%AF%94%E8%BE%83%E5%99%A8/</link>
+      <pubDate>Tue, 06 Apr 2021 22:29:57 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/java%E6%AF%94%E8%BE%83%E5%99%A8/</guid>
+      <description>Java比较器的使用背景 Java中的对象，正常情况下，只能进行比较：== 或 !</description>
+    </item>
+    
+    <item>
       <title>Thread的生命周期</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</link>
       <pubDate>Fri, 02 Apr 2021 10:38:44 +0800</pubDate>
@@ -483,6 +530,15 @@ final 用来修饰一个类：此类不能被其他类所继承 比如：String�
       
       <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
       <description>位运算符 &amp;laquo; &amp;raquo; &amp;raquo;&amp;gt; &amp;amp; | ^ ~</description>
+    </item>
+    
+    <item>
+      <title>其他类</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/%E5%85%B6%E4%BB%96%E7%B1%BB/</link>
+      <pubDate>Tue, 06 Apr 2021 23:01:03 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%B8%B8%E7%94%A8%E7%B1%BB/%E5%85%B6%E4%BB%96%E7%B1%BB/</guid>
+      <description>System类  System类代表系统，系统级的很多属性和控制方法都放置在该类的内部。该类位于java.lang包 由于该类的构造器是private的，所以无法创建该类的对象，也就是无法实例化该类。其内部的成员变量和成员方法都是static的，所以也可以很方便的进行调用 方法  native long currentTimeMills() void exit(int status) void gc() String getProperty(String key)    Math类 java.</description>
     </item>
     
     <item>
