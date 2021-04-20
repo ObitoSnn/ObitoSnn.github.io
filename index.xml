@@ -8,7 +8,17 @@
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Fri, 16 Apr 2021 11:30:10 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Apr 2021 23:28:59 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>泛型的理解</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E6%B3%9B%E5%9E%8B%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 19 Apr 2021 17:43:09 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E6%B3%9B%E5%9E%8B%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+      <description>泛型的概念 所谓泛型，就是允许在定义类、接口时通过一个标识表示类中某个属性的类型或者是某个方法的返回值及参数类型。这个类型参数将在使用时（例如：继承或实现这个接口，用这个类型声明变量、创建对象）确定（即传入实际的类型参数，也称为类型实参）
+泛型引入的背景 集合容器类在设计阶段 / 声明阶段不能确定这个容器到底实际存的是什么类型的对象，所以在JDK 1.</description>
+    </item>
+    
     <item>
       <title>数组与集合</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E9%9B%86%E5%90%88/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%9B%86%E5%90%88/</link>
@@ -189,6 +199,15 @@
     </item>
     
     <item>
+      <title>泛型在集合中的使用</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E6%B3%9B%E5%9E%8B%E5%9C%A8%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 19 Apr 2021 17:59:21 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E6%B3%9B%E5%9E%8B%E5%9C%A8%E9%9B%86%E5%90%88%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>在集合中使用泛型之前的例子 @Test public void test1(){ ArrayList list = new ArrayList(); //需求：存放学生的成绩 list.</description>
+    </item>
+    
+    <item>
       <title>Collection接口</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E9%9B%86%E5%90%88/collection%E6%8E%A5%E5%8F%A3/</link>
       <pubDate>Sat, 10 Apr 2021 10:30:40 +0800</pubDate>
@@ -330,6 +349,16 @@ int num;//声明num = 10;//初始化int id = 1001;//声明 + 初始化int[] i
     </item>
     
     <item>
+      <title>自定义泛型类、泛型接口、泛型方法</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%9B%E5%9E%8B%E7%B1%BB%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 19 Apr 2021 18:22:09 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%9B%E5%9E%8B%E7%B1%BB%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95/</guid>
+      <description>举例 Order.java
+public class Order&amp;lt;T&amp;gt; { String orderName; int orderId; //类的内部结构就可以使用类的泛型 T orderT; public Order(){ //编译不通过 // T[] arr = new T[10]; //编译通过 T[] arr = (T[]) new Object[10]; } public Order(String orderName,int orderId,T orderT){ this.</description>
+    </item>
+    
+    <item>
       <title>Iterator接口与foreach循环</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E9%9B%86%E5%90%88/iterator%E6%8E%A5%E5%8F%A3%E4%B8%8Eforeach%E5%BE%AA%E7%8E%AF/</link>
       <pubDate>Sun, 11 Apr 2021 00:31:17 +0800</pubDate>
@@ -441,6 +470,16 @@ final 用来修饰一个类：此类不能被其他类所继承 比如：String�
     </item>
     
     <item>
+      <title>泛型在继承上的体现</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E6%B3%9B%E5%9E%8B%E5%9C%A8%E7%BB%A7%E6%89%BF%E4%B8%8A%E7%9A%84%E4%BD%93%E7%8E%B0/</link>
+      <pubDate>Mon, 19 Apr 2021 23:18:37 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E6%B3%9B%E5%9E%8B%E5%9C%A8%E7%BB%A7%E6%89%BF%E4%B8%8A%E7%9A%84%E4%BD%93%E7%8E%B0/</guid>
+      <description>泛型在继承上的体现 虽然类A是类B的父类，但是G&amp;lt;A&amp;gt;和G&amp;lt;B&amp;gt;二者不具备子父类关系，二者是并列关系
+类A是类B的父类，A&amp;lt;G&amp;gt;是B&amp;lt;G&amp;gt;的父类</description>
+    </item>
+    
+    <item>
       <title>Collection子接口：List接口</title>
       <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E9%9B%86%E5%90%88/collection%E5%AD%90%E6%8E%A5%E5%8F%A3list%E6%8E%A5%E5%8F%A3/</link>
       <pubDate>Sun, 11 Apr 2021 14:01:07 +0800</pubDate>
@@ -521,6 +560,15 @@ final 用来修饰一个类：此类不能被其他类所继承 比如：String�
       
       <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/%E6%B3%A8%E9%87%8A%E4%B8%8Eapi%E6%96%87%E6%A1%A3%E7%AD%89/</guid>
       <description>注释:Comment  分类：  单行注释：// 多行注释：/* */ 文档注释：/** */   作用：  对所写的程序进行解释说明，增强可读性。方便自己，方便别人 调试所写的代码   特点：  单行注释和多行注释，注释了的内容不参与编译。换句话说，编译以后生成的.</description>
+    </item>
+    
+    <item>
+      <title>通配符</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E9%80%9A%E9%85%8D%E7%AC%A6/</link>
+      <pubDate>Mon, 19 Apr 2021 23:28:59 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/%E6%B3%9B%E5%9E%8B/%E9%80%9A%E9%85%8D%E7%AC%A6/</guid>
+      <description>通配符的使用 /* 通配符的使用 通配符：?</description>
     </item>
     
     <item>
@@ -662,6 +710,16 @@ int[] arr = new int[]{1,2,3,4,5}; for(int i = 0;i &amp;lt;= arr.</description>
       
       <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/%E8%BF%90%E7%AE%97%E7%AC%A6/%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
       <description>三元运算符 (条件表达式)? 表达式1 : 表达式2</description>
+    </item>
+    
+    <item>
+      <title>Collections工具类的使用</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E9%9B%86%E5%90%88/collections%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 18 Apr 2021 11:28:45 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E9%9B%86%E5%90%88/collections%E5%B7%A5%E5%85%B7%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>Collections工具类 作用：操作Collection和Map的工具类
+常用方法：</description>
     </item>
     
     <item>
