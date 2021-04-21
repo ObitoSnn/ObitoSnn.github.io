@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java反射机制 on 主页</title>
+    <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/</link>
+    <description>Recent content in Java反射机制 on 主页</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Wed, 21 Apr 2021 14:29:57 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>反射的概述</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E7%9A%84%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Wed, 21 Apr 2021 14:30:27 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E7%9A%84%E6%A6%82%E8%BF%B0/</guid>
+      <description>关于反射的理解 Reflection(反射)是被视为动态语言的关键，反射机制允许程序在执行期借助于Reflection API取得任何类的内部信息，并能直接操作任意对象的内部属性及方法</description>
+    </item>
+    
+    <item>
+      <title>Class类的理解与获取Class的实例</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/class%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E8%8E%B7%E5%8F%96class%E7%9A%84%E5%AE%9E%E4%BE%8B/</link>
+      <pubDate>Wed, 21 Apr 2021 14:38:27 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/class%E7%B1%BB%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E8%8E%B7%E5%8F%96class%E7%9A%84%E5%AE%9E%E4%BE%8B/</guid>
+      <description>Class类的理解 类的加载过程：
+程序经过javac.exe命令以后，会生成一个或多个字节码文件(.class结尾)。接着我们使用java.exe命令对某个字节码文件进行解释运行。相当于将某个字节码文件加载到内存中。此过程就称为类的加载。加载到内存中的类，我们就称为运行时类，此 运行时类，就作为Class的一个实例</description>
+    </item>
+    
+    <item>
+      <title>了解ClassLoader</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E4%BA%86%E8%A7%A3classloader/</link>
+      <pubDate>Wed, 21 Apr 2021 14:56:53 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E4%BA%86%E8%A7%A3classloader/</guid>
+      <description>类的加载过程 类的加载过程 类加载的作用：将class文件字节码内容加载到内存中，并将这些静态数据转换成方法区的运行时数据结构，然后在堆中生成一个代表这个类的java.lang.Class对象，作为方法区中类数据的访问入口</description>
+    </item>
+    
+    <item>
+      <title>反射应用一：创建运行时类的对象</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E4%B8%80%E5%88%9B%E5%BB%BA%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E7%9A%84%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Wed, 21 Apr 2021 15:15:42 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E4%B8%80%E5%88%9B%E5%BB%BA%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E7%9A%84%E5%AF%B9%E8%B1%A1/</guid>
+      <description>代码举例 Class&amp;lt;Person&amp;gt; clazz = Person.</description>
+    </item>
+    
+    <item>
+      <title>反射应用二：获取运行时类的完整结构</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E4%BA%8C%E8%8E%B7%E5%8F%96%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E7%9A%84%E5%AE%8C%E6%95%B4%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Wed, 21 Apr 2021 15:20:36 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E4%BA%8C%E8%8E%B7%E5%8F%96%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E7%9A%84%E5%AE%8C%E6%95%B4%E7%BB%93%E6%9E%84/</guid>
+      <description>我们可以通过反射，获取对应的运行时类中所有的属性、方法、构造器、父类、接口、父类的泛型、包、注解、异常等。。。。
+典型代码 @Test public void test1(){ Class clazz = Person.</description>
+    </item>
+    
+    <item>
+      <title>反射应用三：调用运行时类的指定结构</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E4%B8%89%E8%B0%83%E7%94%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E7%9A%84%E6%8C%87%E5%AE%9A%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Wed, 21 Apr 2021 15:36:32 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E4%B8%89%E8%B0%83%E7%94%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E7%B1%BB%E7%9A%84%E6%8C%87%E5%AE%9A%E7%BB%93%E6%9E%84/</guid>
+      <description>调用指定的属性 @Test public void testField1() throws Exception { Class clazz = Person.</description>
+    </item>
+    
+    <item>
+      <title>反射应用四：动态代理</title>
+      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E5%9B%9B%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Wed, 21 Apr 2021 15:41:31 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E9%83%A8%E5%88%86/java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/%E5%8F%8D%E5%B0%84%E5%BA%94%E7%94%A8%E5%9B%9B%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/</guid>
+      <description>代理模式的原理 使用一个代理将对象包装起来，然后用该代理对象取代原始对象。任何对原始对象的调用都要通过代理。代理对象决定是否以及何时将方法调用转到原始对象上
+静态代理 举例 //实现Runnable接口的方法创建多线程。 Class MyThread implements Runnable{} //相当于被代理类 Class Thread implements Runnable{} //相当于代理类 main() { MyThread t = new MyThread(); Thread thread = new Thread(t); thread.</description>
+    </item>
+    
+  </channel>
+</rss>
