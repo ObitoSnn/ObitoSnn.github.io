@@ -8,7 +8,17 @@
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Wed, 24 Feb 2021 14:19:01 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/authors/obitosnn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Apr 2021 15:35:56 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/authors/obitosnn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux（CentOS7）安装JDK、MySQL、Tomcat</title>
+      <link>https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/</link>
+      <pubDate>Sun, 25 Apr 2021 15:35:56 +0800</pubDate>
+      
+      <guid>https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/</guid>
+      <description>前言 为了模拟远程操作，在Windows环境下使用远程工具连接Linux，所以在正式安装前需要准备两个远程工具(Xshell和Xftp)，使用Xshell远程控制Linux，使用Xftp将文件传输至Linux。当然你也可以直接在Linux中下载所需文件
+安装JDK JDK官网下载地址 JDK 8</description>
+    </item>
+    
     <item>
       <title>浅谈Map</title>
       <link>https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/</link>

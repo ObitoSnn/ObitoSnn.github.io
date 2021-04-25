@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>Linux（CentOS7）安装JDK、MySQL、Tomcat | 主页</title>
+<link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
+<script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_32x32_fill_box_center_2.PNG">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ObitoSnn.gitee.io/images/myicon_hud541b336772fa06e5ec876ceffad9aeb_7343_180x180_fill_box_center_2.PNG">
+
+<meta name="description"
+  content="前言 为了模拟远程操作，在Windows环境下使用远程工具连接Linux，所以在正式安装前需要准备两个远程工具(Xshell和Xftp)，使用Xshell远程控制Linux，使用Xftp将文件传输至Linux。当然你也可以直接在Linux中下载所需文件
+安装JDK JDK官网下载地址 JDK 8">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文章",
+      "item":"https://ObitoSnn.gitee.io/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Linux（CentOS7）安装JDK、MySQL、Tomcat",
+      "item":"https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/"
+    },
+    "headline": "Linux（CentOS7）安装JDK、MySQL、Tomcat | 主页","datePublished": "2021-04-25T15:35:56+08:00",
+    "dateModified": "2021-04-25T15:35:56+08:00",
+    "wordCount":  289 ,
+    "author": {
+        "@type": "Person",
+        "name": ["ObitoSnn"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "ObitoSnn",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://ObitoSnn.gitee.io/images/myicon.PNG"
+        }
+        },
+    "description": "前言 为了模拟远程操作，在Windows环境下使用远程工具连接Linux，所以在正式安装前需要准备两个远程工具(Xshell和Xftp)，使用Xshell远程控制Linux，使用Xftp将文件传输至Linux。当然你也可以直接在Linux中下载所需文件\n安装JDK JDK官网下载地址 JDK 8"
+}
+</script><meta property="og:title" content="Linux（CentOS7）安装JDK、MySQL、Tomcat | 主页" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
+
+
+<meta property="og:url" content="https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/" />
+
+
+
+
+<meta property="og:description" content="前言 为了模拟远程操作，在Windows环境下使用远程工具连接Linux，所以在正式安装前需要准备两个远程工具(Xshell和Xftp)，使用Xshell远程控制Linux，使用Xftp将文件传输至Linux。当然你也可以直接在Linux中下载所需文件
+安装JDK JDK官网下载地址 JDK 8" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="主页" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-04-25T15:35:56&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-04-25T15:35:56&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="centos" />
+
+<meta property="article:tag" content="linux" />
+
+<meta property="article:tag" content="数据库" />
+
+<meta property="article:tag" content="java" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">主页</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于我</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+            <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
+            <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">按标签分类</a>
+            <a href="/series/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">按系列分类</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Linux（CentOS7）安装JDK、MySQL、Tomcat</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-04-25</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://ObitoSnn.gitee.io/categories/linux/" class="hover:text-eureka">linux</a>
+        
+    </div>
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://ObitoSnn.gitee.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/" class="hover:text-eureka">搭建环境</a>
+        
+    </div>
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="前言">前言</h2>
+<p>为了模拟远程操作，在Windows环境下使用远程工具连接Linux，所以在正式安装前需要准备两个远程工具(<a href="https://www.netsarang.com/zh/xshell/">Xshell</a>和<a href="https://www.netsarang.com/zh/xftp/">Xftp</a>)，使用Xshell远程控制Linux，使用Xftp将文件传输至Linux。当然你也可以直接在Linux中下载所需文件</p>
+<h2 id="安装jdk">安装JDK</h2>
+<h3 id="jdk官网下载地址">JDK官网下载地址</h3>
+<p><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">JDK 8</a></p>
+<h3 id="将下载好的jdk压缩包传输至linux中">将下载好的JDK压缩包传输至Linux中</h3>
+<p><img src="https://img-blog.csdnimg.cn/20210424173233988.gif" alt=""></p>
+<p>查看是否传输成功</p>
+<pre><code class="language-shelll">ll /usr/local/
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210424173658716.png" alt=""></p>
+<h3 id="解压文件">解压文件</h3>
+<pre><code class="language-shell">cd /usr/local/
+tar -zxf jdk-8u281-linux-x64.tar.gz -C /usr/local/
+</code></pre>
+<h3 id="配置jdk环境变量">配置JDK环境变量</h3>
+<p>centos7默认使用openJDK</p>
+<p><img src="https://img-blog.csdnimg.cn/20210424174332317.png" alt=""></p>
+<p>要使用自己下载的JDK需手动配置环境变量</p>
+<pre><code class="language-shell">vim /etc/profile
+</code></pre>
+<p>按<kbd>i</kbd>进入编辑模式，在<code>/etc/profile</code>文件尾部添加如下内容</p>
+<pre><code class="language-shell">export JAVA_HOME=/usr/local/jdk1.8.0_281 #填写自己JDK存放的路径
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+</code></pre>
+<p>按<kbd>Esc</kbd>退出编辑模式，执行<code>:wq</code>保存并退出文件</p>
+<p>使用<code>source</code>命令使得配置文件生效</p>
+<pre><code class="language-shell">source /etc/profile
+</code></pre>
+<p>至此，可以在任意路径下执行<code>java/bin</code>目录中的命令</p>
+<p>执行<code>java -version</code>查看是否配置成功</p>
+<p><img src="https://img-blog.csdnimg.cn/20210424191353643.png" alt=""></p>
+<p>至此JDK安装完毕</p>
+<h2 id="安装mysql以glibc版为例">安装MySQL（以glibc版为例）</h2>
+<h3 id="卸载mariadb">卸载MariaDB</h3>
+<p>在正式安装MySQL前需将MariaDB卸载。因为安装MySQL会和MariaDB的文件冲突，所以需要先卸载掉MariaDB</p>
+<p>查看系统中安装的MariaDB</p>
+<pre><code class="language-shell">yum list installed | grep mariadb
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210424213809582.png" alt=""></p>
+<p>卸载MariaDB</p>
+<pre><code class="language-shell">yum -y remove mariadb-libs.x86_64
+rm -rf /etc/my.cnf /etc/my.cnf.d
+</code></pre>
+<h3 id="mysql官网下载地址">MySQL官网下载地址</h3>
+<p><a href="https://downloads.mysql.com/archives/community/">MySQL</a></p>
+<h3 id="将下载好的mysql压缩包传输至linux中">将下载好的mysql压缩包传输至Linux中</h3>
+<p><img src="https://img-blog.csdnimg.cn/20210424224830383.gif" alt=""></p>
+<h3 id="解压文件-1">解压文件</h3>
+<pre><code class="language-shell">tar -zxf /usr/local/mysql-5.7.33-linux-glibc2.12-x86_64.tar.gz -C /usr/local/
+</code></pre>
+<h3 id="重命名解压之后的文件夹">重命名解压之后的文件夹</h3>
+<pre><code class="language-shell">mv /usr/local/mysql-5.7.33-linux-glibc2.12-x86_64 /usr/local/mysql
+</code></pre>
+<h3 id="在mysql文件夹下创建data文件夹">在mysql文件夹下创建data文件夹</h3>
+<pre><code class="language-shell">mkdir /usr/local/mysql/data
+</code></pre>
+<h3 id="创建用于管理mysql的用户">创建用于管理mysql的用户</h3>
+<h4 id="创建组">创建组</h4>
+<pre><code class="language-shell">groupadd mysql
+</code></pre>
+<h4 id="创建用户">创建用户</h4>
+<pre><code class="language-shell">useradd -r -g mysql mysql
+</code></pre>
+<h4 id="修改mysql文件夹所有者和文件夹权限">修改mysql文件夹所有者和文件夹权限</h4>
+<pre><code class="language-shell">chown mysql:mysql mysql
+chmod 750 mysql #普通用户不能操作该文件夹
+</code></pre>
+<h3 id="初始化mysql">初始化MySQL</h3>
+<pre><code class="language-shell">cd /usr/local/mysql/bin
+./mysqld --initialize --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
+</code></pre>
+<p>参数说明</p>
+<ul>
+<li>&ndash;initialize：初始化MySQL，创建MySQL的root用户，随机生成密码</li>
+<li>&ndash;user：执行用户</li>
+<li>&ndash;basedir：MySQL安装程序的目录</li>
+<li>&ndash;datadir：MySQL数据文件存放的位置</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20210424230421846.png" alt=""></p>
+<h3 id="启动安全功能">启动安全功能</h3>
+<p>在服务器与客户机之间来回传输的所有数据进行加密。通过证书提供了身份验证机制，mysql_ssl_rsa_setup命令提供了开启数据加密功能，生成数字证书</p>
+<pre><code class="language-shell">cd /usr/local/mysql/bin/
+./mysql_ssl_rsa_setup --datadir=/usr/local/mysql/data
+</code></pre>
+<h3 id="配置mysql环境变量">配置MySQL环境变量</h3>
+<pre><code class="language-shell">vim /etc/profile
+</code></pre>
+<p>按<kbd>i</kbd>进入编辑模式，在<code>/etc/profile</code>文件尾部添加如下内容</p>
+<pre><code class="language-shell">export PATH=/usr/local/mysql/bin:$PATH
+</code></pre>
+<p>按<kbd>Esc</kbd>退出编辑模式，执行<code>:wq</code>命令保存并退出文件</p>
+<p>使用<code>source</code>命令使得配置文件生效</p>
+<pre><code class="language-shell">source /etc/profile
+</code></pre>
+<p>至此，可以在任意路径下执行<code>mysql/bin</code>目录中的命令</p>
+<h3 id="开启mysql服务">开启MySQL服务</h3>
+<h4 id="方式一手动开启服务">方式一：手动开启服务</h4>
+<pre><code class="language-shell">cd /usr/local/mysql/support-files/
+./mysql.server start
+</code></pre>
+<h4 id="方式二将mysql注册为系统服务">方式二：将MySQL注册为系统服务</h4>
+<p>该方式可以在任意路径下使用<code>systemctl start mysql</code>和<code>systemctl stop mysql</code>开启或关闭MySQL服务</p>
+<p>执行<code>ps -ef | grep mysql</code>命令查看mysql进程</p>
+<p><img src="https://img-blog.csdnimg.cn/20210425001819765.png" alt=""></p>
+<pre><code class="language-shell">vim /etc/systemd/system/mysql.service
+</code></pre>
+<p>在mysql.service文件中添加如下内容</p>
+<p><font color=red><strong>注：PIDFile=xxx，该处填写mysql进程中pid-file的路径</strong> </font></p>
+<pre><code>[Unit]
+
+Description=Mysql
+
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+
+Type=forking
+
+PIDFile=填写mysql进程中pid-file的路径
+
+ExecStart=/usr/local/mysql/support-files/mysql.server start
+
+ExecReload=/bin/kill -s HUP $MAINPID
+
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+PrivateTmp=false
+
+[Install]
+</code></pre>
+<p>按<kbd>Esc</kbd>退出编辑模式，执行<code>:wq</code>命令保存并退出文件</p>
+<p>执行<code>systemctl daemon-reload</code>命令重新载入<code>/etc/systemd</code>文件夹，扫描新的或有变动的单元，使得刚刚添加的mysql.service文件生效</p>
+<p>此后则可通过如下命令操作MySQL</p>
+<p><code>systemctl enable mysql</code>：开机启动MySQL服务</p>
+<p><code>systemctl start mysql</code>：启动MySQL服务</p>
+<p><code>systemctl stop mysql</code>：停止MySQL服务</p>
+<p><code>systemctl restart mysql</code>：重启MySQL服务</p>
+<h3 id="连接mysql服务器">连接MySQL服务器</h3>
+<p>如果没有配置环境变量的话，需切换至<code>/usr/local/mysql/bin</code>目录，执行<code>./mysql -uroot -p</code>命令</p>
+<pre><code class="language-shell">#没有配置环境变量
+cd /usr/local/mysql/bin
+./mysql -uroot -p
+
+#配置了环境变量，可在任何路径下执行以下命令
+mysql -uroot -p
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210425003907183.png" alt=""></p>
+<h3 id="修改root用户的密码">修改root用户的密码</h3>
+<p>因为初始密码是临时的，所以第一次执行语句会提示修改密码</p>
+<p><img src="https://img-blog.csdnimg.cn/20210425004400568.png" alt=""></p>
+<pre><code class="language-shell">#修改root用户密码，此处密码为333
+alter user 'root'@'localhost' identified by '333';
+</code></pre>
+<h3 id="授权远程访问可选设置">授权远程访问（可选设置）</h3>
+<p>授权远程访问，在没有授权之前只能在本机访问msyql， 远程授权就是让其他计算机通过网络访问mysql（这样远程客户端才能访问）</p>
+<pre><code class="language-shell">#此处222为远程客户端root用户的登录密码
+grant all privileges on *.* to root@'%' identified by '222';
+
+#刷新权限
+flush privileges;
+</code></pre>
+<p>此时远程客户端还并不能连接本机MySQL，还需要关闭防火墙</p>
+<pre><code class="language-sheel">#关闭防火墙
+systemctl stop firewalld
+</code></pre>
+<p>至此，远程客户端便可访问本机MySQL</p>
+<h2 id="安装tomcat">安装Tomcat</h2>
+<h3 id="tomcat官网下载地址">Tomcat官网下载地址</h3>
+<p><a href="https://archive.apache.org/dist/tomcat/">Tomcat</a></p>
+<h3 id="将下载好的tomcat压缩包传输至linux">将下载好的Tomcat压缩包传输至Linux</h3>
+<p><img src="https://img-blog.csdnimg.cn/2021042511073783.gif" alt=""></p>
+<h3 id="解压文件-2">解压文件</h3>
+<pre><code class="language-shell">#解压文件
+tar -zxf /usr/local/apache-tomcat-8.0.50.tar.gz -C /usr/local/
+#重命名文件夹
+mv /usr/local/apache-tomcat-8.0.50 /usr/local/tomcat
+</code></pre>
+<h3 id="配置tomcat环境变量">配置Tomcat环境变量</h3>
+<pre><code class="language-shell">vim /etc/profile
+</code></pre>
+<p>按<kbd>i</kbd>进入编辑模式，，在<code>/etc/profile</code>文件尾部添加如下内容</p>
+<pre><code class="language-shell">export CATALINA_HOME=/usr/local/tomcat
+</code></pre>
+<p>按<kbd>Esc</kbd>退出编辑模式，执行<code>:wq</code>命令保存并退出文件</p>
+<p>使用<code>source</code>命令使得配置文件生效</p>
+<pre><code class="language-shell">source /etc/profile
+</code></pre>
+<h3 id="配置tomcat的catalinash文件">配置Tomcat的catalina.sh文件</h3>
+<pre><code class="language-shell">cd $CATALINA_HOME
+vim bin/catalina.sh
+</code></pre>
+<p>按<kbd>i</kbd>进入编辑模式，，在<code>bin/catalina.sh</code>文件中添加如下内容</p>
+<pre><code class="language-shell">#填写自己配置的路径
+CATALINA_HOME=/usr/local/tomcat
+JAVA_HOME=/usr/local/jdk1.8.0_281
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210425113120270.png" alt=""></p>
+<p>按<kbd>Esc</kbd>退出编辑模式，执行<code>:wq</code>命令保存并退出文件</p>
+<h3 id="开启tomcat服务">开启Tomcat服务</h3>
+<h4 id="方式一手动开启">方式一：手动开启</h4>
+<pre><code class="language-shell">cd $CATALINA_HOME/bin
+#启动Tomcat
+./startup.sh
+#关闭Tomcat
+./shutdown.sh
+</code></pre>
+<h4 id="方式二将tomcat注册为系统服务">方式二：将Tomcat注册为系统服务</h4>
+<pre><code class="language-shell">cd $CATALINA_HOME/bin
+cp -rf catalina.sh /etc/init.d/tomcat
+
+#开启Tomcat
+service tomcat start
+
+#关闭Tomcat
+service tomcat stop
+</code></pre>
+<p>至此，可以在任意路径下执行<code>service tomcat start</code>和<code>service tomcat stop</code>开启或关闭Tomcat</p>
+
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://ObitoSnn.gitee.io/tags/centos/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#centos</a>
+    
+    <a href="https://ObitoSnn.gitee.io/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#linux</a>
+    
+    <a href="https://ObitoSnn.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#数据库</a>
+    
+    <a href="https://ObitoSnn.gitee.io/tags/java/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#java</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://ObitoSnn.gitee.io/authors/obitosnn/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://ObitoSnn.gitee.io/images/myicon.PNG" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://ObitoSnn.gitee.io/authors/obitosnn/" class="block font-bold text-lg pb-1 mb-2 border-b">ObitoSnn</a>
+            <span class="block pb-2">别问，问就是只会CRUD。。。</span>
+            
+            
+            
+            
+            
+            <a href="mailto:obitosnn@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/ObitoSnn/" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://ObitoSnn.gitee.io/posts/%E6%B5%85%E8%B0%88map/" class="block">浅谈Map</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/">Linux（CentOS7）安装JDK、MySQL、Tomcat</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#安装jdk">安装JDK</a>
+      <ul>
+        <li><a href="#jdk官网下载地址">JDK官网下载地址</a></li>
+        <li><a href="#将下载好的jdk压缩包传输至linux中">将下载好的JDK压缩包传输至Linux中</a></li>
+        <li><a href="#解压文件">解压文件</a></li>
+        <li><a href="#配置jdk环境变量">配置JDK环境变量</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装mysql以glibc版为例">安装MySQL（以glibc版为例）</a>
+      <ul>
+        <li><a href="#卸载mariadb">卸载MariaDB</a></li>
+        <li><a href="#mysql官网下载地址">MySQL官网下载地址</a></li>
+        <li><a href="#将下载好的mysql压缩包传输至linux中">将下载好的mysql压缩包传输至Linux中</a></li>
+        <li><a href="#解压文件-1">解压文件</a></li>
+        <li><a href="#重命名解压之后的文件夹">重命名解压之后的文件夹</a></li>
+        <li><a href="#在mysql文件夹下创建data文件夹">在mysql文件夹下创建data文件夹</a></li>
+        <li><a href="#创建用于管理mysql的用户">创建用于管理mysql的用户</a>
+          <ul>
+            <li><a href="#创建组">创建组</a></li>
+            <li><a href="#创建用户">创建用户</a></li>
+            <li><a href="#修改mysql文件夹所有者和文件夹权限">修改mysql文件夹所有者和文件夹权限</a></li>
+          </ul>
+        </li>
+        <li><a href="#初始化mysql">初始化MySQL</a></li>
+        <li><a href="#启动安全功能">启动安全功能</a></li>
+        <li><a href="#配置mysql环境变量">配置MySQL环境变量</a></li>
+        <li><a href="#开启mysql服务">开启MySQL服务</a>
+          <ul>
+            <li><a href="#方式一手动开启服务">方式一：手动开启服务</a></li>
+            <li><a href="#方式二将mysql注册为系统服务">方式二：将MySQL注册为系统服务</a></li>
+          </ul>
+        </li>
+        <li><a href="#连接mysql服务器">连接MySQL服务器</a></li>
+        <li><a href="#修改root用户的密码">修改root用户的密码</a></li>
+        <li><a href="#授权远程访问可选设置">授权远程访问（可选设置）</a></li>
+      </ul>
+    </li>
+    <li><a href="#安装tomcat">安装Tomcat</a>
+      <ul>
+        <li><a href="#tomcat官网下载地址">Tomcat官网下载地址</a></li>
+        <li><a href="#将下载好的tomcat压缩包传输至linux">将下载好的Tomcat压缩包传输至Linux</a></li>
+        <li><a href="#解压文件-2">解压文件</a></li>
+        <li><a href="#配置tomcat环境变量">配置Tomcat环境变量</a></li>
+        <li><a href="#配置tomcat的catalinash文件">配置Tomcat的catalina.sh文件</a></li>
+        <li><a href="#开启tomcat服务">开启Tomcat服务</a>
+          <ul>
+            <li><a href="#方式一手动开启">方式一：手动开启</a></li>
+            <li><a href="#方式二将tomcat注册为系统服务">方式二：将Tomcat注册为系统服务</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="javascript:void(0);">ObitoSnn</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

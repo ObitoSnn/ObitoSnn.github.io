@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>主页</title>
+<title>文章 | 主页</title>
 <link rel="stylesheet" href="https://ObitoSnn.gitee.io/css/eureka.min.css">
 <script defer src="https://ObitoSnn.gitee.io/js/eureka.min.js"></script>
 
@@ -54,14 +54,28 @@
 
 
 
-<meta property="og:title" content="主页" />
+
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[{
+            "@type":"ListItem",
+            "position":  1 ,
+            "name": "Java IO流——获取文本上字符出现的次数,把数据写入文件",
+            "description": "思路： ①创建文件及相应的流。 ②处理数据：读入和写出。补充：处理文本中字符出现的次数(方式一：将文本文件的字符添加到list，再将字符作为key存入map中，value为字符出现次数；方式二：也可以直接将读入字符存入map中) ③关闭资源。",
+            "url": "https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/"
+        }
+    ]
+}
+</script><meta property="og:title" content="文章 | 主页" />
 <meta property="og:type" content="website" />
 
 
 <meta property="og:image" content="https://ObitoSnn.gitee.io/images/myicon.PNG">
 
 
-<meta property="og:url" content="https://ObitoSnn.gitee.io/authors/" />
+<meta property="og:url" content="https://ObitoSnn.gitee.io/posts/" />
 
 
 
@@ -89,10 +103,10 @@
 
 
 
-<meta property="article:section" content="authors" />
+<meta property="article:section" content="posts" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/authors/index.xml" title="主页" />
+<link rel="alternate" type="application/rss+xml" href="https://ObitoSnn.gitee.io/posts/index.xml" title="主页" />
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -112,7 +126,7 @@
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
             <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于我</a>
-            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文章</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
             <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
             <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">按标签分类</a>
@@ -167,16 +181,88 @@
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Authors</h1>
+    <h1 class="font-bold text-3xl text-primary-text">文章</h1>
     
 </article>
-<div class="bg-secondary-bg rounded px-6 py-8">
+<div class="bg-secondary-bg rounded px-6">
+    <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://ObitoSnn.gitee.io/posts/java-io%E6%B5%81%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E4%B8%8A%E5%AD%97%E7%AC%A6%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E6%8A%8A%E6%95%B0%E6%8D%AE%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6/" class="font-bold text-xl hover:text-eureka">Java IO流——获取文本上字符出现的次数,把数据写入文件</a>
+</div>
+<div class="content">
+  思路： ①创建文件及相应的流。 ②处理数据：读入和写出。补充：处理文本中字符出现的次数(方式一：将文本文件的字符添加到list，再将字符作为key存入map中，value为字符出现次数；方式二：也可以直接将读入字符存入map中) ③关闭资源。
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-02-23</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://ObitoSnn.gitee.io/authors/obitosnn/" class="text-eureka hover:underline">ObitoSnn</a>
-    </h2>
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://ObitoSnn.gitee.io/categories/java/" class="hover:text-eureka">java</a>
+        
+    </div>
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://ObitoSnn.gitee.io/series/javase/" class="hover:text-eureka">javase</a>
+        
+    </div>
     
 </div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+</div>
+
+
+</div>
+
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/page/2/">2</a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/posts/page/3/">3</a>
+  </li>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+
 
       </div>
     </div>
