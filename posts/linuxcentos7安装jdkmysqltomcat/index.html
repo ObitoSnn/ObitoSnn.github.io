@@ -348,7 +348,7 @@ chmod 750 mysql #普通用户不能操作该文件夹
 </ul>
 <p><img src="https://img-blog.csdnimg.cn/20210424230421846.png" alt=""></p>
 <h3 id="启动安全功能">启动安全功能</h3>
-<p>在服务器与客户机之间来回传输的所有数据进行加密。通过证书提供了身份验证机制，mysql_ssl_rsa_setup命令提供了开启数据加密功能，生成数字证书</p>
+<p>为服务器与客户机之间来回传输的所有数据进行加密。mysql_ssl_rsa_setup命令提供了开启数据加密功能，生成数字证书</p>
 <pre><code class="language-shell">cd /usr/local/mysql/bin/
 ./mysql_ssl_rsa_setup --datadir=/usr/local/mysql/data
 </code></pre>
