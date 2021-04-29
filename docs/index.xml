@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>文档 on 主页</title>
-    <link>https://ObitoSnn.gitee.io/docs/</link>
+    <link>https://ObitoSnn.github.io/docs/</link>
     <description>Recent content in 文档 on 主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Wed, 21 Apr 2021 15:41:31 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 15:41:31 +0800</lastBuildDate><atom:link href="https://ObitoSnn.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

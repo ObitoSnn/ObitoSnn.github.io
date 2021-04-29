@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>搭建环境 on 主页</title>
-    <link>https://ObitoSnn.gitee.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/</link>
+    <link>https://ObitoSnn.github.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/</link>
     <description>Recent content in 搭建环境 on 主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Sun, 25 Apr 2021 15:35:56 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Apr 2021 15:35:56 +0800</lastBuildDate><atom:link href="https://ObitoSnn.github.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux（CentOS7）安装JDK、MySQL、Tomcat</title>
-      <link>https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/</link>
+      <link>https://ObitoSnn.github.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/</link>
       <pubDate>Sun, 25 Apr 2021 15:35:56 +0800</pubDate>
       
-      <guid>https://ObitoSnn.gitee.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/</guid>
+      <guid>https://ObitoSnn.github.io/posts/linuxcentos7%E5%AE%89%E8%A3%85jdkmysqltomcat/</guid>
       <description>前言 为了模拟远程操作，在Windows环境下使用远程工具连接Linux，所以在正式安装前需要准备两个远程工具(Xshell和Xftp)，使用Xshell远程控制Linux，使用Xftp将文件传输至Linux。当然你也可以直接在Linux中下载所需文件
 安装JDK JDK官网下载地址 JDK 8</description>
     </item>

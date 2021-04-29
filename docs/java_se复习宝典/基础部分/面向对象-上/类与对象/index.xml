@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>类与对象 on 主页</title>
-    <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</link>
+    <link>https://ObitoSnn.github.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</link>
     <description>Recent content in 类与对象 on 主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Fri, 26 Feb 2021 23:01:29 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Feb 2021 23:01:29 +0800</lastBuildDate><atom:link href="https://ObitoSnn.github.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JVM内存结构</title>
-      <link>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/</link>
+      <link>https://ObitoSnn.github.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/</link>
       <pubDate>Fri, 26 Feb 2021 23:18:10 +0800</pubDate>
       
-      <guid>https://ObitoSnn.gitee.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://ObitoSnn.github.io/docs/java_se%E5%A4%8D%E4%B9%A0%E5%AE%9D%E5%85%B8/%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E4%B8%8A/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/</guid>
       <description>编译完源程序以后，生成一个或多个字节码文件
 我们使用JVM中的类的加载器和解释器对生成的字节码文件进行解释运行。意味着，需要将字节码文件对应的类加载到内存中，涉及到内存解析
 《JVM规范》</description>

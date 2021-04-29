@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on 主页</title>
-    <link>https://ObitoSnn.gitee.io/series/</link>
+    <link>https://ObitoSnn.github.io/series/</link>
     <description>Recent content in Series on 主页</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;javascript:void(0);&#34;&gt;ObitoSnn&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Sun, 25 Apr 2021 15:35:56 +0800</lastBuildDate><atom:link href="https://ObitoSnn.gitee.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Apr 2021 15:35:56 +0800</lastBuildDate><atom:link href="https://ObitoSnn.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>搭建环境</title>
-      <link>https://ObitoSnn.gitee.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/</link>
+      <link>https://ObitoSnn.github.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Sun, 25 Apr 2021 15:35:56 +0800</pubDate>
       
-      <guid>https://ObitoSnn.gitee.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/</guid>
+      <guid>https://ObitoSnn.github.io/series/%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83/</guid>
       <description></description>
     </item>
     
     <item>
       <title>javase</title>
-      <link>https://ObitoSnn.gitee.io/series/javase/</link>
+      <link>https://ObitoSnn.github.io/series/javase/</link>
       <pubDate>Wed, 24 Feb 2021 14:19:01 +0800</pubDate>
       
-      <guid>https://ObitoSnn.gitee.io/series/javase/</guid>
+      <guid>https://ObitoSnn.github.io/series/javase/</guid>
       <description></description>
     </item>
     
